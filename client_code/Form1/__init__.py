@@ -43,6 +43,10 @@ class Form1(Form1Template):
     self.fin_cost = part_selected['Fin Cost']
     self.total_cost = part_selected['Total Cost']
     self.markup = part_selected['Markup']
+    if self.markup_percentage_type == 0:
+      self.markup_percentage.text = 80
+    else:
+      self.markup_percentage.text = 46.5
     self.selling = part_selected['SELLING PRICE']
     self.markup_percentage_type = part_selected['Markup Type'] 
 
@@ -78,10 +82,8 @@ class Form1(Form1Template):
     self.total_cost_box.text = self.total_cost
 
     """Calculating the markup based on the products markup percentage"""
-    if self.markup_percentage_type == 0:
-      markup_float = total_cost_float * 0.8
-    else:
-      markup_float = total_cost_float * 0.465
+    markup_float = total_cost_float * float(self.markup_percentage.text)/100
+
 
     """Setting the markup value to display"""
     self.markup = "$ " + '{:,.2f}'.format(markup_float)
@@ -108,6 +110,16 @@ class Form1(Form1Template):
 
   def markup_check_change(self, **event_args):
     """This method is called when this checkbox is checked or unchecked"""
+    self.set_selling()
+    pass
+
+  def markup_percentage_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    self.set_selling()
+    pass
+
+def markup_percentage_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
     self.set_selling()
     pass
 

@@ -48,16 +48,28 @@ components:
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     name: description
-    layout_properties: {grid_position: 'OKYQIN,OEWVIA'}
+    layout_properties: {grid_position: 'OKYQIN,OEWVIA OJNGWW,XKDHGB'}
+  - name: label_2_copy
+    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      visible: true, text: Amount, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'OKYQIN,OEWVIA BFVGHF,ADPBPG'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: ridge, foreground: '',
       visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: true, underline: false,
       icon: ''}
     name: descript_text
-    layout_properties: {grid_position: 'OKYQIN,AFPPEX'}
+    layout_properties: {grid_position: 'OKYQIN,AFPPEX HUOKQJ,HEEMRD'}
     event_bindings: {}
     data_bindings: []
+  - name: item_amount
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'OKYQIN,AFPPEX EWFLEE,MIBVTO'}
+    event_bindings: {pressed_enter: markup_percentage_pressed_enter}
   - type: Label
     properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
       visible: true, text: List Price, font_size: null, font: '', spacing_above: small,
@@ -195,6 +207,11 @@ components:
     properties: {}
     name: markup_box
     layout_properties: {grid_position: 'PSUZCT,HGXLFH'}
+  - name: markup_percentage
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'PSUZCT,NCCMJI'}
+    event_bindings: {pressed_enter: markup_percentage_pressed_enter}
   - type: CheckBox
     properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
       foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null,
@@ -209,11 +226,22 @@ components:
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     name: label_11
-    layout_properties: {grid_position: 'DHUGVD,QWVSOI'}
+    layout_properties: {grid_position: 'DHUGVD,QWVSOI LZMCVC,XZRPCA'}
+  - name: label_12
+    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      visible: true, text: Total Price, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'DHUGVD,QWVSOI RMIFSQ,PSZSOI'}
   - type: Label
     properties: {}
     name: selling_box
-    layout_properties: {grid_position: 'DHUGVD,DPDBBC'}
+    layout_properties: {grid_position: 'DHUGVD,DPDBBC KEJUVX,HCDDTD'}
+  - name: total_box
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'DHUGVD,DPDBBC RPYZPT,TKRVIX'}
   - type: Label
     properties: {}
     name: alter_selling

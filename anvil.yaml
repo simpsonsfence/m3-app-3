@@ -185,7 +185,7 @@ services:
         vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4&exportFormat=ods'}
       thumbnailLink: https://lh3.googleusercontent.com/drive-storage/AJQWtBOep1XaMFUQs1Mhy3vrMcWHAbXcI1552pV4J7cX0TuxTu8BBK04Q08ZmFQCMSVaiw-PwCbt6k8mlBDBPGHQpgdKIbWzLUevUqQ08JMeXTqisxJpfJX5hLxzVHG7IQ=s220
       ownerNames: [Todd Sales]
-  server_config: {}
+  server_config: {enc_delegation_refresh_token: YhzzmcdXd1fgfRWvHWnrFRzrt+VfuoOXiCYPVUeZ9Fq3aBMTbKS0P+T19xjqpx3vu2pjYtme6X7NDWq+2meU5LLXX8dgQZjm5+hWt21/ql5eFXxO4yadtpKddztvio0Hx5dj5QnbCOGeFbLpM2EhOUCgKRZUeAGZi52DTO3iM6bmihWedXKCOUy57zN+th5hYN83Bi5WvLSoSWkPSoJT0tiOqegh0veZX1Bq2kskaNenlWOebCcfuTxsooQf/HX/3RMNPt3mnFPTYHg34YyuVCvtXwNXtHUdP74w8rhdszs/pcWFCpD4QdWMbE9Djw==}
 package_name: M3_App_3
 allow_embedding: false
 name: Clone of M3 App 3
