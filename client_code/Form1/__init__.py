@@ -25,8 +25,6 @@ class Form1(Form1Template):
   item_totals = list(())
   total_price = 0
   
-  
-  
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -165,6 +163,9 @@ class Form1(Form1Template):
   
   def add_button_click(self, **event_args):
     """This method is called when the button is clicked"""
+    self.repeating_panel_1.items.apend({self.item_numbers, self.item_descriptions, self.item_sellings, self.item_amounts, self.item_totals})
+    self.repeating_panel_1.items = self.repeating_panel_1.items
+    
     self.item_numbers.append(self.item_number)
     self.item_descriptions.append(self.descript)
     self.item_sellings.append(self.selling)
@@ -176,7 +177,7 @@ class Form1(Form1Template):
     pass
 
   def generate_invoice_click(self, **event_args):
-    """This method is called when the button is clicked"""
+    """This method is called when the button is clicked"""  
     print(self.item_numbers)
     print(self.item_descriptions)
     print(self.item_sellings)
