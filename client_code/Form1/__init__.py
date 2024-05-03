@@ -18,11 +18,6 @@ class Form1(Form1Template):
   total = ""
   total_float = 0
   markup_percentage_type = 0
-  item_numbers = list(())
-  item_descriptions = list(())
-  item_sellings = list(())
-  item_amounts = list(())
-  item_totals = list(())
   total_price = 0
   
   def __init__(self, **properties):
@@ -74,6 +69,7 @@ class Form1(Form1Template):
     self.markup_box.text = self.markup
     self.selling_box.text = self.selling
     self.total_box.text = self.selling
+    self.total = float(self.selling.lstrip('$ ').rstrip(' ').replace(",", ""))
 
   def set_selling(self):
     """Float variables to total up costs"""
@@ -163,37 +159,30 @@ class Form1(Form1Template):
   
   def add_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.repeating_panel_1.items.apend({self.item_numbers, self.item_descriptions, self.item_sellings, self.item_amounts, self.item_totals})
-    self.repeating_panel_1.items = self.repeating_panel_1.items
+    try:
+      self.repeating_panel_1.items.append({'item_num': self.item_number, 'desc': self.descript, 'cost': self.selling, 'num': self.item_amount.text, 't_cost': "$ " + '{:,.2f}'.format(self.total)})
     
-    self.item_numbers.append(self.item_number)
-    self.item_descriptions.append(self.descript)
-    self.item_sellings.append(self.selling)
-    self.item_amounts.append(self.item_amount.text)
-    self.item_totals.append(self.total)
-
+    except AttributeError:
+      self.repeating_panel_1.items = [
+        {'item_num': self.item_number, 'desc': self.descript, 'cost': self.selling, 'num': self.item_amount.text, 't_cost': "$ " + '{:,.2f}'.format(self.total)}
+      ]
+    
+    self.repeating_panel_1.items = self.repeating_panel_1.items
     self.total_price += self.total_float
+    self.totaled_cost.text = "$ " + '{:,.2f}'.format(self.total_price) + "    "
     
     pass
 
   def generate_invoice_click(self, **event_args):
     """This method is called when the button is clicked"""  
-    print(self.item_numbers)
-    print(self.item_descriptions)
-    print(self.item_sellings)
-    print(self.item_amounts)
-    print(self.item_totals)
-    print(self.total_price)
+    
     pass
 
   def clear_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.item_numbers = list(())
-    self.item_descriptions = list(())
-    self.item_sellings = list(())
-    self.item_amounts = list(())
-    self.item_totals = list(())
+    self.repeating_panel_1.items = []
     self.total_price = 0
+    self.totaled_cost.text = "$ " + '{:,.2f}'.format(self.total_price) + "    "
     pass
 
 
