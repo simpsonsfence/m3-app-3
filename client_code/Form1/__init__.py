@@ -172,7 +172,7 @@ class Form1(Form1Template):
     
     self.repeating_panel_1.items = self.repeating_panel_1.items
     self.total_price += self.total_float
-    self.totaled_cost.text = "$ " + '{:,.2f}'.format(self.total_price) + "       "
+    self.totaled_cost.text =  'Total: $ ' + '{:,.2f}'.format(self.total_price) + "           "
     
     pass
 
@@ -190,7 +190,7 @@ class Form1(Form1Template):
     """This method is called when the button is clicked"""
     self.repeating_panel_1.items = []
     self.total_price = 0
-    self.totaled_cost.text = "$ " + '{:,.2f}'.format(self.total_price) + "       "
+    self.totaled_cost.text = 'Total: $ ' + '{:,.2f}'.format(self.total_price) + "           "
     pass
 
 

@@ -22,7 +22,7 @@ components:
   name: label_1
   layout_properties: {slot: title}
 - name: content_panel
-  properties: {}
+  properties: {col_widths: '{"EXYWTW":55,"IZLBLD":5}'}
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
@@ -278,17 +278,17 @@ components:
       layout_properties: {grid_position: 'DHUGVD,DPDBBC YBQGTQ,XCEJEE'}
       event_bindings: {click: clear_button_click}
   - name: invoice_panel
-    properties: {}
+    properties: {col_spacing: medium}
     type: ColumnPanel
     layout_properties: {grid_position: 'ASCWGY,EXYWTW'}
     components:
     - name: data_grid_1
       properties:
         columns:
-        - {id: JKSDUP, title: Item Number, data_key: item_num, width: 127, expand: false}
-        - {id: VJQQOR, title: Description, data_key: desc, width: 544, expand: false}
-        - {id: OJLQEN, title: Cost, data_key: cost, width: 117, expand: false}
-        - {id: RXRYNW, data_key: num, title: Amount, width: 74, expand: false}
+        - {id: JKSDUP, title: Item Number, data_key: item_num, width: 107, expand: false}
+        - {id: VJQQOR, title: Description, data_key: desc, width: 339, expand: false}
+        - {id: OJLQEN, title: Cost, data_key: cost, width: 86, expand: false}
+        - {id: RXRYNW, data_key: num, title: Amt., width: 66, expand: false}
         - {id: RNVHPW, data_key: t_cost, title: Total Cost}
         show_page_controls: false
       type: DataGrid
