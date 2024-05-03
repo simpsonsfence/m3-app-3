@@ -1,6 +1,7 @@
 from ._anvil_designer import Form1Template
 from anvil import *
 import anvil.server
+import anvil.media
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 
@@ -177,8 +178,12 @@ class Form1(Form1Template):
 
   def generate_invoice_click(self, **event_args):
     """This method is called when the button is clicked"""  
-    self.label_1.visible = False
-    self.form_panel.visible = False
+    if self.label_1.visible:
+      self.label_1.visible = False
+      self.form_panel.visible = False
+    else:
+      self.label_1.visible = True
+      self.form_panel.visible = True
     pass
 
   def clear_button_click(self, **event_args):

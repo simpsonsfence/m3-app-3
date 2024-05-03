@@ -5,8 +5,7 @@ unique_ids:
     Form1.ItemTemplate1.ItemTemplate2: '1684676442603765682523375.3726'
     Form1.RowTemplate1: '1714757537443115682161383.1498'
   modules: {}
-  server_modules:
-    ServerModule1: '1714768073946460092358287.8616'
+  server_modules: {}
   assets:
     standard-page.html: CJHR5HTB7ZF3XA5JA466AJ4GJE7W52AC
     theme.css: FWVS34VQLKJR2BY3PT4GVNP3ARCFGIIR

@@ -8,6 +8,12 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - name: generate_invoice
+    properties: {text: Invoice}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: generate_invoice_click}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Little Beaver Invoice Creator, font_size: null, font: '', spacing_above: small,
@@ -271,11 +277,6 @@ components:
       type: Button
       layout_properties: {grid_position: 'DHUGVD,DPDBBC YBQGTQ,XCEJEE'}
       event_bindings: {click: clear_button_click}
-    - name: generate_invoice
-      properties: {text: Generate Invoice, role: outlined-button}
-      type: Button
-      layout_properties: {grid_position: 'DHUGVD,DPDBBC YBQGTQ,UCGTQH'}
-      event_bindings: {click: generate_invoice_click}
   - name: invoice_panel
     properties: {}
     type: ColumnPanel
