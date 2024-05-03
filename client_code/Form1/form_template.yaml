@@ -41,7 +41,8 @@ components:
     name: part_look_up
     layout_properties: {grid_position: 'QNFDUR,LSXARU'}
     event_bindings: {change: drop_down_1_change}
-    data_bindings: []
+    data_bindings:
+    - {property: enabled, code: '', writeback: false}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Description, font_size: null, font: '', spacing_above: small,
@@ -234,6 +235,11 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'DHUGVD,QWVSOI RMIFSQ,PSZSOI'}
+  - name: add_button
+    properties: {text: Add Item(s), role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'DHUGVD,QWVSOI AIMSJS,HSPEDV'}
+    event_bindings: {click: add_button_click}
   - type: Label
     properties: {}
     name: selling_box
@@ -242,10 +248,20 @@ components:
     properties: {}
     type: Label
     layout_properties: {grid_position: 'DHUGVD,DPDBBC RPYZPT,TKRVIX'}
+  - name: clear_button
+    properties: {text: Clear Item(s), role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'DHUGVD,DPDBBC YBQGTQ,XCEJEE'}
+    event_bindings: {click: clear_button_click}
   - type: Label
     properties: {}
     name: alter_selling
     layout_properties: {grid_position: 'DHUGVD,IWFDQR'}
+  - name: generate_invoice
+    properties: {text: Generate Invoice, role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'NBIAGT,ENUXZJ'}
+    event_bindings: {click: generate_invoice_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
