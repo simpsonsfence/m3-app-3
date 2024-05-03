@@ -159,35 +159,35 @@ class Form1(Form1Template):
   
   def add_button_click(self, **event_args):
     """This method is called when the button is clicked"""
+    self.set_selling()
+    
     try:
-      self.repeating_panel_1.items.append({'item_num': self.item_number, 'desc': self.descript, 'cost': self.selling, 'num': self.item_amount.text, 't_cost': "$ " + '{:,.2f}'.format(self.total)})
+      self.repeating_panel_1.items.append({'item_num': self.item_number, 'desc': self.descript, 'cost': self.selling, 'num': self.item_amount.text, 't_cost': self.total})
     
     except AttributeError:
       self.repeating_panel_1.items = [
-        {'item_num': self.item_number, 'desc': self.descript, 'cost': self.selling, 'num': self.item_amount.text, 't_cost': "$ " + '{:,.2f}'.format(self.total)}
+        {'item_num': self.item_number, 'desc': self.descript, 'cost': self.selling, 'num': self.item_amount.text, 't_cost': self.total}
       ]
     
     self.repeating_panel_1.items = self.repeating_panel_1.items
     self.total_price += self.total_float
-    self.totaled_cost.text = "$ " + '{:,.2f}'.format(self.total_price) + "    "
+    self.totaled_cost.text = "$ " + '{:,.2f}'.format(self.total_price) + "       "
     
     pass
 
   def generate_invoice_click(self, **event_args):
     """This method is called when the button is clicked"""  
-    
+    self.label_1.visible = False
+    self.form_panel.visible = False
     pass
 
   def clear_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.repeating_panel_1.items = []
     self.total_price = 0
-    self.totaled_cost.text = "$ " + '{:,.2f}'.format(self.total_price) + "    "
+    self.totaled_cost.text = "$ " + '{:,.2f}'.format(self.total_price) + "       "
     pass
 
-
-
-     
 
     
   
