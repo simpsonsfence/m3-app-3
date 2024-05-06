@@ -22,14 +22,14 @@ components:
   name: label_1
   layout_properties: {slot: title}
 - name: content_panel
-  properties: {col_widths: '{"EXYWTW":55}'}
+  properties: {col_widths: '{"EXYWTW":55}', spacing_above: none, spacing_below: none}
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"BJVXDZ":20,"LSXARU":45,"QWVSOI":10,"DPDBBC":32,"OEWVIA":15,"AFPPEX":45,"PLJJWC":15}',
-      spacing_below: small, background: ''}
+      wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"BJVXDZ":20,"LSXARU":45,"QWVSOI":10,"DPDBBC":32,"OEWVIA":15,"AFPPEX":45,"PLJJWC":15}',
+      spacing_below: none, background: ''}
     name: form_panel
     layout_properties: {grid_position: 'GVOSZU,PZJKHM'}
     components:
@@ -317,10 +317,20 @@ components:
     - name: generate_invoice
       properties: {text: Generate Invoice, role: outlined-button}
       type: Button
-      layout_properties: {grid_position: 'DHUGVD,DPDBBC YBQGTQ,PKCXQH'}
+      layout_properties: {grid_position: 'DHUGVD,DPDBBC YBQGTQ,UZDVFR'}
       event_bindings: {click: generate_invoice_click}
+    - name: add_total_button
+      properties: {text: Add Previous Total, role: outlined-button}
+      type: Button
+      layout_properties: {grid_position: 'SOFJVS,PEUTTR'}
+      event_bindings: {click: add_total_button_click}
+    - name: previous_total
+      properties: {role: outlined}
+      type: TextBox
+      layout_properties: {grid_position: 'SOFJVS,NWRSJK'}
   - name: invoice_panel
-    properties: {col_spacing: medium, col_widths: '{"PTUMER":15}'}
+    properties: {col_spacing: medium, col_widths: '{"PTUMER":15}', spacing_above: none,
+      spacing_below: none, wrap_on: never}
     type: ColumnPanel
     layout_properties: {grid_position: 'ASCWGY,EXYWTW'}
     components:
@@ -328,21 +338,25 @@ components:
       properties:
         columns:
         - {id: JKSDUP, title: Item Number, data_key: item_num, width: 107, expand: false}
-        - {id: VJQQOR, title: Description, data_key: desc, width: 322, expand: false}
-        - {id: OJLQEN, title: Cost, data_key: cost, width: 108, expand: false}
-        - {id: RXRYNW, data_key: num, title: Amt., width: 66, expand: false}
+        - {id: VJQQOR, title: Description, data_key: desc, width: 252, expand: false}
+        - {id: OJLQEN, title: Cost, data_key: cost, width: 106, expand: false}
+        - {id: RXRYNW, data_key: num, title: Amt., width: 80, expand: false}
         - {id: RNVHPW, data_key: t_cost, title: Total Cost}
         show_page_controls: false
         spacing_above: none
         spacing_below: none
+        role: null
+        auto_header: true
       type: DataGrid
       components:
       - name: repeating_panel_1
         properties: {item_template: Form1.RowTemplate1, spacing_above: none, spacing_below: none}
         type: RepeatingPanel
         layout_properties: {}
+        data_bindings: []
       layout_properties: {grid_position: 'UMWLPS,QVKZWY'}
+      data_bindings: []
     - name: totaled_cost
-      properties: {align: right}
+      properties: {align: right, spacing_above: none, spacing_below: none}
       type: Label
       layout_properties: {grid_position: 'STVZDF,PTUMER'}

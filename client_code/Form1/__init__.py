@@ -195,7 +195,7 @@ class Form1(Form1Template):
     """This method is called when the button is clicked"""
     self.repeating_panel_1.items = []
     self.total_price = 0
-    self.totaled_cost.text = 'Total: $ ' + '{:,.2f}'.format(self.total_price) + "           "
+    self.totaled_cost.text = 'Total: $ ' + '{:,.2f}'.format(self.total_price)
     pass
 
   def search_list(self):
@@ -227,9 +227,24 @@ class Form1(Form1Template):
   def remove_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.total_price -= float(self.repeating_panel_1.items[-1]['t_cost'].lstrip('$ ').rstrip(' ').replace(",", ""))
-    self.totaled_cost.text =  'Total: $ ' + '{:,.2f}'.format(self.total_price) + "           "
+    self.totaled_cost.text =  'Total: $ ' + '{:,.2f}'.format(self.total_price)
     self.repeating_panel_1.items.pop()
     self.repeating_panel_1.items = self.repeating_panel_1.items
+    pass
+
+  def add_total_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    try:
+      self.repeating_panel_1.items.append({'item_num': 'Cont.', 'desc': 'Previous Total', 'cost': '', 'num': '', 't_cost': '$ ' + '{:,.2f}'.format(float(self.previous_total.text))})
+    
+    except AttributeError:
+      self.repeating_panel_1.items = [
+        {'item_num': 'Cont.', 'desc': 'Previous Total', 'cost': '', 'num': '', 't_cost': '$ ' + '{:,.2f}'.format(float(self.previous_total.text))}
+      ]
+
+    self.repeating_panel_1.items = self.repeating_panel_1.items
+    self.total_price += float(self.previous_total.text)
+    self.totaled_cost.text =  'Total: $ ' + '{:,.2f}'.format(self.total_price)
     pass
 
 
