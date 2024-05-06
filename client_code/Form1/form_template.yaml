@@ -28,7 +28,7 @@ components:
   components:
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"BJVXDZ":15,"LSXARU":45,"KKULHH":20,"UKTGVQ":20,"PBXRLE":40,"MWQKHK":15,"CEXPKY":15,"MQYZUP":30,"YXIIJY":10,"TXGSOG":35,"UGQDML":47,"LAOOXA":15,"CLJRNA":15,"DZDUHS":15,"VJJYUT":30,"QDJJTM":15,"XBZCLG":15,"TTYDFK":15,"SCQQXQ":15,"HVBKKY":30,"QWVSOI":10,"DPDBBC":32,"HCHLNF":20,"HGXLFH":15,"VFALGP":20,"OEWVIA":15,"AFPPEX":45,"OCGKSN":30,"NCCMJI":20}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"BJVXDZ":20,"LSXARU":45,"KKULHH":20,"UKTGVQ":20,"PBXRLE":40,"MWQKHK":15,"CEXPKY":15,"MQYZUP":30,"YXIIJY":10,"TXGSOG":35,"UGQDML":47,"LAOOXA":15,"CLJRNA":15,"DZDUHS":15,"VJJYUT":30,"QDJJTM":15,"XBZCLG":15,"TTYDFK":15,"SCQQXQ":15,"HVBKKY":30,"QWVSOI":10,"DPDBBC":32,"HCHLNF":20,"HGXLFH":15,"VFALGP":20,"OEWVIA":15,"AFPPEX":45,"OCGKSN":30,"NCCMJI":20,"PLJJWC":15}',
       spacing_below: small, background: ''}
     name: form_panel
     layout_properties: {grid_position: 'GVOSZU,PZJKHM'}
@@ -40,6 +40,12 @@ components:
         underline: false, icon: ''}
       name: search
       layout_properties: {grid_position: 'QNFDUR,BJVXDZ'}
+    - name: search_box
+      properties: {role: outlined}
+      type: TextBox
+      layout_properties: {grid_position: 'QNFDUR,PLJJWC'}
+      event_bindings: {pressed_enter: search_box_pressed_enter, change: search_box_change,
+        lost_focus: search_box_lost_focus}
     - type: DropDown
       properties:
         role: null
