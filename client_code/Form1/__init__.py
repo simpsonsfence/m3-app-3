@@ -182,9 +182,13 @@ class Form1(Form1Template):
     """This method is called when the button is clicked"""  
     self.label_1.visible = False
     self.form_panel.visible = False
+    '''self.totaled_cost.visible = False'''
+    '''self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': 'Total:', 'num': '', 't_cost': '$ ' + '{:,.2f}'.format(self.total_price)})'''
     self.call_js('printPage')
-    self.label_1.visible = True
+    '''self.repeating_panel_1.items.pop()'''
+    '''self.label_1.visible = True'''
     self.form_panel.visible = True
+    self.totaled_cost.visible = True
     pass
 
   def clear_button_click(self, **event_args):
