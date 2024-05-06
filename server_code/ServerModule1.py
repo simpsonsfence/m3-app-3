@@ -6,7 +6,7 @@ import anvil.server
 @anvil.server.callable
 def create_pdf():
   # Create a pdf from 'Form2', and pass in 'name' and 'img' as its constructors
-  pdf = anvil.pdf.render_form("Form1")
+  pdf = PDFRenderer(filename='Little Beaver Invoice', quality='original').render_form("Form1")
   return pdf
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
