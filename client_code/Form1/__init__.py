@@ -20,13 +20,15 @@ class Form1(Form1Template):
   total_float = 0
   markup_percentage_type = 0
   total_price = 0
+  full_list = []
   
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     """Set the variable to look up items in the spreadsheet"""
-    self.part_look_up.items = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
+    self.full_list = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
+    self.part_look_up.items = self.full_list
     # Any code you write here will run before the form opens.
 
   def drop_down_1_change(self, **event_args):
@@ -178,12 +180,12 @@ class Form1(Form1Template):
 
   def generate_invoice_click(self, **event_args):
     """This method is called when the button is clicked"""  
-    if self.label_1.visible:
-      self.label_1.visible = False
-      self.form_panel.visible = False
-    else:
-      self.label_1.visible = True
-      self.form_panel.visible = True
+    self.label_1.visible = False
+    self.form_panel.visible = False
+    pdf = anvil.server.call('create_pdf')
+    download(pdf)
+    self.label_1.visible = True
+    self.form_panel.visible = True 
     pass
 
   def clear_button_click(self, **event_args):
@@ -191,6 +193,32 @@ class Form1(Form1Template):
     self.repeating_panel_1.items = []
     self.total_price = 0
     self.totaled_cost.text = 'Total: $ ' + '{:,.2f}'.format(self.total_price) + "           "
+    pass
+
+  def search_list(self):
+    searched_list = []
+    searched_list.append(self.full_list[0])
+    for x in self.full_list:
+      if self.search_box.text in x[0] or self.search_box.text in x[0].lower():
+        searched_list.append(x)
+
+    self.part_look_up.items = searched_list
+    
+    pass
+  
+  def search_box_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    self.search_list()
+    pass
+
+  def search_box_change(self, **event_args):
+    """This method is called when the text in this text box is edited"""
+    self.search_list()
+    pass
+
+  def search_box_lost_focus(self, **event_args):
+    """This method is called when the TextBox loses focus"""
+    self.search_list()
     pass
 
 
