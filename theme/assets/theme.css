@@ -4,8 +4,7 @@
 @media print {
 
     html, body {
-      height:100vh; 
-      margin: 0 !important;
+      height:80vh !important; 
       padding: 0 !important;
       overflow: hidden;
     }
