@@ -180,12 +180,11 @@ class Form1(Form1Template):
 
   def generate_invoice_click(self, **event_args):
     """This method is called when the button is clicked"""  
-    """self.label_1.visible = False
-    self.form_panel.visible = False"""
-    pdf = anvil.server.call('create_pdf')
-    download(pdf)
-    """self.label_1.visible = True
-    self.form_panel.visible = True """
+    self.label_1.visible = False
+    self.form_panel.visible = False
+    self.call_js('printPage')
+    self.label_1.visible = True
+    self.form_panel.visible = True
     pass
 
   def clear_button_click(self, **event_args):
