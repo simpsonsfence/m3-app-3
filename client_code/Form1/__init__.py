@@ -52,13 +52,13 @@ class Form1(Form1Template):
     self.fin_cost = part_selected['Fin Cost']
     self.total_cost = part_selected['Total Cost']
     self.markup = part_selected['Markup']
+    self.item_amount.text = 1
+    self.selling = part_selected['SELLING PRICE']
+    self.markup_percentage_type = int(part_selected['Markup Type'])
     if self.markup_percentage_type == 1:
       self.markup_percentage.text = 80
     else:
       self.markup_percentage.text = 46.5
-    self.item_amount.text = 1
-    self.selling = part_selected['SELLING PRICE']
-    self.markup_percentage_type = part_selected['Markup Type'] 
 
     """Set the amounts into the displayed text to veiw"""
     self.descript_text.text = self.descript
@@ -180,13 +180,13 @@ class Form1(Form1Template):
 
   def generate_invoice_click(self, **event_args):
     """This method is called when the button is clicked"""  
-    self.label_1.visible = False
     self.form_panel.visible = False
-    '''self.totaled_cost.visible = False'''
-    '''self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': 'Total:', 'num': '', 't_cost': '$ ' + '{:,.2f}'.format(self.total_price)})'''
+    self.totaled_cost.visible = False
+    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': 'Total:', 'num': '', 't_cost': '$ ' + '{:,.2f}'.format(self.total_price)})
+    self.repeating_panel_1.items = self.repeating_panel_1.items
     self.call_js('printPage')
-    '''self.repeating_panel_1.items.pop()'''
-    '''self.label_1.visible = True'''
+    self.repeating_panel_1.items.pop()
+    self.repeating_panel_1.items = self.repeating_panel_1.items
     self.form_panel.visible = True
     self.totaled_cost.visible = True
     pass
@@ -222,6 +222,14 @@ class Form1(Form1Template):
   def search_box_lost_focus(self, **event_args):
     """This method is called when the TextBox loses focus"""
     self.search_list()
+    pass
+
+  def remove_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.total_price -= float(self.repeating_panel_1.items[-1]['t_cost'].lstrip('$ ').rstrip(' ').replace(",", ""))
+    self.totaled_cost.text =  'Total: $ ' + '{:,.2f}'.format(self.total_price) + "           "
+    self.repeating_panel_1.items.pop()
+    self.repeating_panel_1.items = self.repeating_panel_1.items
     pass
 
 

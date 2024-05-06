@@ -8,10 +8,15 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
-  components: []
+  components:
+  - name: image_1
+    properties: {source: _/theme/LOGO-Chatham.png, display_mode: shrink_to_fit, height: '50',
+      spacing_above: none, spacing_below: none}
+    type: Image
+    layout_properties: {}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Little Beaver Invoice Creator, font_size: null, font: '', spacing_above: small,
+    text: Little Beaver Invoice, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   name: label_1
@@ -23,7 +28,7 @@ components:
   components:
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"BJVXDZ":20,"LSXARU":45,"KKULHH":20,"UKTGVQ":20,"PBXRLE":40,"MWQKHK":15,"CEXPKY":15,"MQYZUP":30,"YXIIJY":10,"TXGSOG":35,"UGQDML":47,"LAOOXA":15,"CLJRNA":15,"DZDUHS":15,"VJJYUT":30,"QDJJTM":15,"XBZCLG":15,"TTYDFK":15,"SCQQXQ":15,"HVBKKY":30,"QWVSOI":10,"DPDBBC":32,"HCHLNF":20,"HGXLFH":15,"VFALGP":20,"OEWVIA":15,"AFPPEX":45,"OCGKSN":30,"NCCMJI":20,"PLJJWC":15}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"BJVXDZ":20,"LSXARU":45,"QWVSOI":10,"DPDBBC":32,"OEWVIA":15,"AFPPEX":45,"PLJJWC":15}',
       spacing_below: small, background: ''}
     name: form_panel
     layout_properties: {grid_position: 'GVOSZU,PZJKHM'}
@@ -72,207 +77,238 @@ components:
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       name: description
-      layout_properties: {grid_position: 'OKYQIN,OEWVIA OJNGWW,XKDHGB'}
-    - name: label_2_copy
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-        visible: true, text: Amount, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'OKYQIN,OEWVIA BFVGHF,ADPBPG'}
+      layout_properties: {grid_position: 'OKYQIN,OEWVIA'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: ridge, foreground: '',
         visible: true, text: '', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       name: descript_text
-      layout_properties: {grid_position: 'OKYQIN,AFPPEX HUOKQJ,HEEMRD'}
+      layout_properties: {grid_position: 'OKYQIN,AFPPEX'}
       event_bindings: {}
       data_bindings: []
-    - name: item_amount
-      properties: {role: outlined}
-      type: TextBox
-      layout_properties: {grid_position: 'OKYQIN,AFPPEX EWFLEE,MIBVTO'}
-      event_bindings: {pressed_enter: markup_percentage_pressed_enter, lost_focus: item_amount_lost_focus,
-        change: item_amount_change}
-    - type: Label
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-        visible: true, text: List Price, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      name: label_2
-      layout_properties: {grid_position: 'JYJQDX,LAOOXA'}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: list_price_box
-      layout_properties: {grid_position: 'JYJQDX,UGQDML'}
-      data_bindings: []
-    - type: Label
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-        visible: true, text: Weight, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      name: label_8
-      layout_properties: {grid_position: 'GIVWVC,YXIIJY'}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: weight
-      layout_properties: {grid_position: 'GIVWVC,TXGSOG'}
-    - type: Label
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-        visible: true, text: Discount, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      name: label_4
-      layout_properties: {grid_position: 'PYPOKG,KKULHH'}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: discount_box
-      layout_properties: {grid_position: 'PYPOKG,UKTGVQ'}
-    - type: CheckBox
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: false,
-        foreground: '', allow_indeterminate: false, visible: false, text: '', font_size: null,
-        font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
-        bold: false, checked: true, underline: false}
-      name: discount_check
-      layout_properties: {grid_position: 'PYPOKG,PBXRLE'}
-      event_bindings: {change: discount_check_change}
-      data_bindings: []
-    - type: Label
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-        visible: true, text: Exchange, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      name: label_6
-      layout_properties: {grid_position: 'PSGZZI,MWQKHK'}
-    - type: Label
+    - name: column_panel_1
       properties: {}
-      name: exchange_box
-      layout_properties: {grid_position: 'PSGZZI,CEXPKY'}
-    - type: CheckBox
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: false,
-        foreground: '', allow_indeterminate: false, visible: false, text: '', font_size: null,
-        font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
-        bold: false, checked: true, underline: false}
-      name: exchange_check
-      layout_properties: {grid_position: 'PSGZZI,MQYZUP'}
-    - type: Label
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-        visible: true, text: Freight, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      name: label_3
-      layout_properties: {grid_position: 'APTXOW,CLJRNA'}
-    - type: Label
+      type: ColumnPanel
+      layout_properties: {grid_position: 'PHUZPT,EHWWIB'}
+      components:
+      - type: Label
+        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+          visible: true, text: List Price, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_2
+        layout_properties: {grid_position: 'YJBVCO,TMIXPI ELBCSE,QJBNXR'}
+      - type: Label
+        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+          visible: true, text: Discount, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_4
+        layout_properties: {grid_position: 'YJBVCO,TMIXPI YSCOZJ,WVZHYH'}
+      - type: Label
+        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+          visible: true, text: Exchange, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_6
+        layout_properties: {grid_position: 'YJBVCO,TMIXPI RPOEOI,CWOEPN'}
+      - type: Label
+        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+          visible: true, text: Total Cost, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_9
+        layout_properties: {grid_position: 'YJBVCO,TMIXPI GPITQF,YHCKGZ'}
+      - type: Label
+        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+          visible: true, text: Selling Price, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_11
+        layout_properties: {grid_position: 'YJBVCO,TMIXPI RFPYJF,WRZQNC'}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: list_price_box
+        layout_properties: {grid_position: 'YJBVCO,SALJWU VPKCGG,CVLRJM'}
+        data_bindings: []
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: discount_box
+        layout_properties: {grid_position: 'YJBVCO,SALJWU VMLSNC,GSYFDI'}
+      - type: Label
+        properties: {}
+        name: exchange_box
+        layout_properties: {grid_position: 'YJBVCO,SALJWU MRQPBT,DEFSNQ'}
+      - type: Label
+        properties: {}
+        name: total_cost_box
+        layout_properties: {grid_position: 'YJBVCO,SALJWU XUNZLP,DHGKLF'}
+      - type: Label
+        properties: {}
+        name: selling_box
+        layout_properties: {grid_position: 'YJBVCO,SALJWU YXJNFR,BLCBLN'}
+    - name: column_panel_2
       properties: {}
-      name: freight_box
-      layout_properties: {grid_position: 'APTXOW,DZDUHS'}
-    - type: CheckBox
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-        foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null,
-        font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
-        bold: false, checked: true, underline: false}
-      name: freight_check
-      layout_properties: {grid_position: 'APTXOW,VJJYUT'}
-      event_bindings: {change: freight_check_change}
-    - type: Label
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-        visible: true, text: Finance Cost, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      name: label_5
-      layout_properties: {grid_position: 'CRGLFY,QDJJTM'}
-    - type: Label
-      properties: {}
-      name: fin_cost_box
-      layout_properties: {grid_position: 'CRGLFY,XBZCLG'}
-    - type: CheckBox
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-        foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null,
-        font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
-        bold: false, checked: true, underline: false}
-      name: fin_cost_check
-      layout_properties: {grid_position: 'CRGLFY,OCGKSN'}
-      event_bindings: {change: fin_cost_check_change}
-    - type: Label
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-        visible: true, text: Total Cost, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      name: label_9
-      layout_properties: {grid_position: 'ZZULUJ,TTYDFK'}
-    - type: Label
-      properties: {}
-      name: total_cost_box
-      layout_properties: {grid_position: 'ZZULUJ,SCQQXQ'}
-    - type: CheckBox
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: false,
-        foreground: '', allow_indeterminate: false, visible: false, text: '', font_size: null,
-        font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
-        bold: false, checked: true, underline: false}
-      name: total_cost_check
-      layout_properties: {grid_position: 'ZZULUJ,HVBKKY'}
-    - type: Label
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-        visible: true, text: Mark Up, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      name: label_7
-      layout_properties: {grid_position: 'PSUZCT,HCHLNF'}
-    - type: Label
-      properties: {}
-      name: markup_box
-      layout_properties: {grid_position: 'PSUZCT,HGXLFH'}
-    - name: markup_percentage
-      properties: {role: outlined}
-      type: TextBox
-      layout_properties: {grid_position: 'PSUZCT,NCCMJI'}
-      event_bindings: {pressed_enter: markup_percentage_pressed_enter, change: markup_percentage_change,
-        lost_focus: markup_percentage_lost_focus}
-    - type: CheckBox
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-        foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null,
-        font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
-        bold: false, checked: true, underline: false}
-      name: markup_check
-      layout_properties: {grid_position: 'PSUZCT,VFALGP'}
-      event_bindings: {change: markup_check_change}
-    - type: Label
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-        visible: true, text: Selling Price, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      name: label_11
-      layout_properties: {grid_position: 'DHUGVD,QWVSOI LZMCVC,XZRPCA'}
-    - name: label_12
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-        visible: true, text: Total Price, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'DHUGVD,QWVSOI RMIFSQ,PSZSOI'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'PHUZPT,JWTLWA'}
+      components:
+      - type: Label
+        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+          visible: true, text: Weight, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_8
+        layout_properties: {grid_position: 'FCQVEJ,AQHVOD VGPIYS,ESJKEQ'}
+      - name: column_panel_8
+        properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":22,"TBVPYT":8,"GUFLHW":30}'}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'FCQVEJ,AQHVOD KSVRBH,NKTFGW'}
+        components:
+        - name: column_panel_7
+          properties: {col_widths: '{"VKDCKU":32,"CMGTSI":8,"FSKEQJ":20}', spacing_above: none,
+            spacing_below: none}
+          type: ColumnPanel
+          layout_properties: {grid_position: 'RMWBEP,ZLHZQS'}
+          components:
+          - name: spacer_2
+            properties: {height: 32, spacing_above: none, spacing_below: none}
+            type: Spacer
+            layout_properties: {grid_position: 'BZKDQC,VKDCKU'}
+          - type: CheckBox
+            properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+              foreground: '', allow_indeterminate: false, visible: true, text: '',
+              font_size: null, font: '', spacing_above: none, spacing_below: none,
+              italic: false, background: '', bold: false, checked: true, underline: false}
+            name: freight_check
+            layout_properties: {grid_position: 'BZKDQC,CMGTSI'}
+            event_bindings: {change: freight_check_change}
+          - type: Label
+            properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+              visible: true, text: Freight, font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: true, underline: false, icon: ''}
+            name: label_3
+            layout_properties: {grid_position: 'BZKDQC,FSKEQJ'}
+        - name: spacer_3
+          properties: {height: 32, spacing_below: none, spacing_above: none}
+          type: Spacer
+          layout_properties: {grid_position: 'FOIFNO,VHTOSF'}
+        - type: CheckBox
+          properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+            foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null,
+            font: '', spacing_above: none, spacing_below: none, italic: false, background: '',
+            bold: false, checked: true, underline: false}
+          name: fin_cost_check
+          layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
+          event_bindings: {change: fin_cost_check_change}
+        - type: Label
+          properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+            visible: true, text: Finance Cost, font_size: null, font: '', spacing_above: small,
+            icon_align: left, spacing_below: small, italic: false, background: '',
+            bold: true, underline: false, icon: ''}
+          name: label_5
+          layout_properties: {grid_position: 'FOIFNO,GUFLHW'}
+      - name: column_panel_3
+        properties: {spacing_above: none, spacing_below: none, col_widths: '{"OSVMEV":32,"TIMOIY":8,"OYZUHE":20}'}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'FCQVEJ,AQHVOD JPLWDX,BCXKYE'}
+        components:
+        - name: spacer_4
+          properties: {height: 32, spacing_above: none, spacing_below: none}
+          type: Spacer
+          layout_properties: {grid_position: 'HHWPVS,OSVMEV'}
+        - type: CheckBox
+          properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+            foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null,
+            font: '', spacing_above: none, spacing_below: none, italic: false, background: '',
+            bold: false, checked: true, underline: false}
+          name: markup_check
+          layout_properties: {grid_position: 'HHWPVS,TIMOIY'}
+          event_bindings: {change: markup_check_change}
+        - type: Label
+          properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+            visible: true, text: Mark Up, font_size: null, font: '', spacing_above: small,
+            icon_align: left, spacing_below: small, italic: false, background: '',
+            bold: true, underline: false, icon: ''}
+          name: label_7
+          layout_properties: {grid_position: 'HHWPVS,OYZUHE'}
+      - name: label_2_copy
+        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+          visible: true, text: Amount, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        type: Label
+        layout_properties: {grid_position: 'FCQVEJ,AQHVOD CSBDTA,ADJCMH'}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: weight
+        layout_properties: {grid_position: 'FCQVEJ,OAEBPE RJCTHL,NOEXJY'}
+      - type: Label
+        properties: {}
+        name: freight_box
+        layout_properties: {grid_position: 'FCQVEJ,OAEBPE WZADVT,BVDXEK'}
+      - type: Label
+        properties: {}
+        name: fin_cost_box
+        layout_properties: {grid_position: 'FCQVEJ,OAEBPE QVJKGZ,NKLOOS'}
+      - name: column_panel_6
+        properties: {col_widths: '{"QWJNNF":35,"JKBXQS":34,"GRWJOW":8}', spacing_above: none,
+          spacing_below: none, col_spacing: medium}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'FCQVEJ,OAEBPE CMCEAL,TVEWEC'}
+        components:
+        - type: Label
+          properties: {}
+          name: markup_box
+          layout_properties: {grid_position: 'GVEGHU,QWJNNF'}
+        - name: markup_percentage
+          properties: {role: outlined, spacing_above: none, spacing_below: none}
+          type: TextBox
+          layout_properties: {grid_position: 'GVEGHU,JKBXQS'}
+          event_bindings: {pressed_enter: markup_percentage_pressed_enter, change: markup_percentage_change,
+            lost_focus: markup_percentage_lost_focus}
+      - name: item_amount
+        properties: {role: outlined, spacing_above: none, spacing_below: none}
+        type: TextBox
+        layout_properties: {grid_position: 'FCQVEJ,OAEBPE SZOMCF,PMOWJZ'}
+        event_bindings: {pressed_enter: markup_percentage_pressed_enter, lost_focus: item_amount_lost_focus,
+          change: item_amount_change}
+    - name: column_panel_5
+      properties: {col_widths: '{"WTFIBR":15,"VPAJGD":45}'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'XEYZOA,GJGJDC'}
+      components:
+      - name: label_12
+        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+          visible: true, text: Total Price, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        type: Label
+        layout_properties: {grid_position: 'ZYNZAC,WTFIBR'}
+      - name: total_box
+        properties: {}
+        type: Label
+        layout_properties: {grid_position: 'ZYNZAC,VPAJGD'}
     - name: add_button
       properties: {text: Add Item(s), role: outlined-button}
       type: Button
-      layout_properties: {grid_position: 'DHUGVD,QWVSOI AIMSJS,HSPEDV'}
+      layout_properties: {grid_position: 'DHUGVD,QWVSOI'}
       event_bindings: {click: add_button_click}
-    - type: Label
-      properties: {}
-      name: selling_box
-      layout_properties: {grid_position: 'DHUGVD,DPDBBC KEJUVX,HCDDTD'}
-    - name: total_box
-      properties: {}
-      type: Label
-      layout_properties: {grid_position: 'DHUGVD,DPDBBC RPYZPT,TKRVIX'}
+    - name: remove_button
+      properties: {text: Remove Last Added, role: outlined-button}
+      type: Button
+      layout_properties: {grid_position: 'DHUGVD,DPDBBC YBQGTQ,EUXDZR'}
+      event_bindings: {click: remove_button_click}
     - name: clear_button
       properties: {text: Clear Item(s), role: outlined-button}
       type: Button
@@ -284,7 +320,7 @@ components:
       layout_properties: {grid_position: 'DHUGVD,DPDBBC YBQGTQ,PKCXQH'}
       event_bindings: {click: generate_invoice_click}
   - name: invoice_panel
-    properties: {col_spacing: medium, col_widths: '{"IBWPBB":45,"PTUMER":15}'}
+    properties: {col_spacing: medium, col_widths: '{"PTUMER":15}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'ASCWGY,EXYWTW'}
     components:
@@ -292,22 +328,21 @@ components:
       properties:
         columns:
         - {id: JKSDUP, title: Item Number, data_key: item_num, width: 107, expand: false}
-        - {id: VJQQOR, title: Description, data_key: desc, width: 339, expand: false}
-        - {id: OJLQEN, title: Cost, data_key: cost, width: 86, expand: false}
+        - {id: VJQQOR, title: Description, data_key: desc, width: 322, expand: false}
+        - {id: OJLQEN, title: Cost, data_key: cost, width: 108, expand: false}
         - {id: RXRYNW, data_key: num, title: Amt., width: 66, expand: false}
         - {id: RNVHPW, data_key: t_cost, title: Total Cost}
         show_page_controls: false
+        spacing_above: none
+        spacing_below: none
       type: DataGrid
       components:
       - name: repeating_panel_1
-        properties: {item_template: Form1.RowTemplate1}
+        properties: {item_template: Form1.RowTemplate1, spacing_above: none, spacing_below: none}
         type: RepeatingPanel
+        layout_properties: {}
       layout_properties: {grid_position: 'UMWLPS,QVKZWY'}
-    - name: spacer_2
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'STVZDF,IBWPBB'}
     - name: totaled_cost
-      properties: {align: left}
+      properties: {align: right}
       type: Label
       layout_properties: {grid_position: 'STVZDF,PTUMER'}

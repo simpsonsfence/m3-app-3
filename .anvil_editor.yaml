@@ -5,6 +5,7 @@ unique_ids:
   modules: {}
   server_modules: {}
   assets:
+    LOGO-Chatham.png: '1715015023123811094119667.3966'
     android-chrome-192x192.png: '1714996857933882755328706.6869'
     standard-page.html: CJHR5HTB7ZF3XA5JA466AJ4GJE7W52AC
     theme.css: FWVS34VQLKJR2BY3PT4GVNP3ARCFGIIR
