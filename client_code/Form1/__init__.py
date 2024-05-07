@@ -27,6 +27,8 @@ class Form1(Form1Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+    anvil.google.auth.login()
+    
     """Set the variable to look up items in the spreadsheet"""
     self.full_list = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
     self.part_look_up.items = self.full_list
