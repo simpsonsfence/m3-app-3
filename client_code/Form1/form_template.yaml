@@ -16,7 +16,7 @@ components:
     layout_properties: {}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Little Beaver Invoice, font_size: null, font: '', spacing_above: small,
+    text: 'Little Beaver Quote ', font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   name: label_1

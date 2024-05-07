@@ -4,6 +4,7 @@ import anvil.server
 import anvil.media
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
+import time
 
 class Form1(Form1Template):
 
@@ -29,6 +30,8 @@ class Form1(Form1Template):
     """Set the variable to look up items in the spreadsheet"""
     self.full_list = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
     self.part_look_up.items = self.full_list
+    self.invoice_number_item = self.part_look_up.selected_value
+    self.label_1.text += self.invoice_number_item['Invoice Number']
     # Any code you write here will run before the form opens.
 
   def drop_down_1_change(self, **event_args):
@@ -189,6 +192,10 @@ class Form1(Form1Template):
     self.repeating_panel_1.items = self.repeating_panel_1.items
     self.form_panel.visible = True
     self.totaled_cost.visible = True
+    self.invoice_number_item['Invoice Number'] = '' + str(int(self.invoice_number_item['Invoice Number'])+1)
+    self.part_look_up.items = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
+    self.invoice_number_item = self.part_look_up.selected_value
+    self.label_1.text = 'Little Beaver Quote ' + self.invoice_number_item['Invoice Number']
     pass
 
   def clear_button_click(self, **event_args):
