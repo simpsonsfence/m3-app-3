@@ -1,5 +1,8 @@
 from ._anvil_designer import Form1Template
 from anvil import *
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 import anvil.server
 import anvil.media
 import anvil.google.auth, anvil.google.drive
@@ -26,9 +29,6 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
-    anvil.google.auth.login()
-    
     """Set the variable to look up items in the spreadsheet"""
     self.full_list = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
     self.part_look_up.items = self.full_list
@@ -255,18 +255,3 @@ class Form1(Form1Template):
     self.total_price += float(self.previous_total.text)
     self.totaled_cost.text =  'Total: $ ' + '{:,.2f}'.format(self.total_price)
     pass
-
-
-    
-  
-
-
-                       
-
-
-    
-    
-      
-
-    
-    

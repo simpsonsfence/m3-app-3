@@ -194,5 +194,29 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
 metadata: {title: Little Beaver Quote Creator, description: Creates quotes from the excel list of little beaver products and their pricing.,
   logo_img: 'asset:android-chrome-192x192.png'}
 startup_form: Form1
+db_schema:
+  users:
+    client: none
+    server: full
+    columns:
+    - name: email
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: enabled
+      admin_ui: {order: 1, width: 200}
+      type: bool
+    - name: last_login
+      admin_ui: {order: 2, width: 200}
+      type: datetime
+    - name: password_hash
+      admin_ui: {order: 3, width: 200}
+      type: string
+    - name: n_password_failures
+      admin_ui: {order: 4, width: 200}
+      type: number
+    - name: confirmed_email
+      admin_ui: {order: 5, width: 200}
+      type: bool
+    title: Users
 uplink_visible: true
 renamed: true
