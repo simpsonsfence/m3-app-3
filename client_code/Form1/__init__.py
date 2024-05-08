@@ -188,7 +188,7 @@ class Form1(Form1Template):
     """This method is called when the button is clicked"""  
     self.form_panel.visible = False
     self.totaled_cost.visible = False
-    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': 'Total:', 'num': '', 't_cost': '$ ' + '{:,.2f}'.format(self.total_price)})
+    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': 'TOTAL DUE:', 'num': '', 't_cost': '$ ' + '{:,.2f}'.format(self.total_price)})
     self.repeating_panel_1.items = self.repeating_panel_1.items
     self.call_js('printPage')
     self.repeating_panel_1.items.pop()

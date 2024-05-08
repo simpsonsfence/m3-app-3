@@ -49,8 +49,7 @@ roles:
   components: [TextBox, TextArea, DatePicker, DropDown]
 - name: input-error
   components: [TextBox, TextArea, DatePicker, DropDown]
-- name: bold
-  components: []
+- {name: bold, components: null}
 - {name: no-resize}
 color_scheme:
   preset_groups:

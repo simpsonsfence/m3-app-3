@@ -63,11 +63,12 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'YDDPMJ,ICEVUT'}
     - name: label_13
-      properties: {text: 'BILL TO:', bold: true}
+      properties: {text: 'BILL TO:', bold: true, spacing_above: none, spacing_below: none}
       type: Label
       layout_properties: {grid_position: 'YDDPMJ,UBSWVG YDMTCE,WYCLNS'}
     - name: text_area_1
-      properties: {background: 'theme:Background', role: no-resize}
+      properties: {background: 'theme:Background', role: no-resize, border: none,
+        spacing_above: none, spacing_below: none, height: 65}
       type: TextArea
       layout_properties: {grid_position: 'YDDPMJ,UBSWVG FECQTJ,GXJBDH'}
     - name: spacer_5
@@ -75,11 +76,12 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'YDDPMJ,MGHPEL'}
     - name: label_14
-      properties: {text: 'SHIP TO:', bold: true}
+      properties: {text: 'SHIP TO:', bold: true, spacing_above: none, spacing_below: none}
       type: Label
       layout_properties: {grid_position: 'YDDPMJ,YARLTB EPDWOE,XGUBGH'}
     - name: text_area_2
-      properties: {background: 'theme:Background', role: no-resize}
+      properties: {background: 'theme:Background', role: no-resize, border: none,
+        spacing_above: none, spacing_below: none, height: 65}
       type: TextArea
       layout_properties: {grid_position: 'YDDPMJ,YARLTB KIOCEY,BWEGQB'}
     - name: spacer_7
@@ -399,9 +401,9 @@ components:
         columns:
         - {id: JKSDUP, title: Item Number, data_key: item_num, width: 107, expand: false}
         - {id: VJQQOR, title: Description, data_key: desc, width: 252, expand: false}
-        - {id: OJLQEN, title: Cost, data_key: cost, width: 106, expand: false}
-        - {id: RXRYNW, data_key: num, title: Amt., width: 80, expand: false}
-        - {id: RNVHPW, data_key: t_cost, title: Total Cost}
+        - {id: OJLQEN, title: Unit Price, data_key: cost, width: 106, expand: false}
+        - {id: RXRYNW, data_key: num, title: Qty., width: 80, expand: false}
+        - {id: RNVHPW, data_key: t_cost, title: Extended Price}
         show_page_controls: false
         spacing_above: none
         spacing_below: none
@@ -420,3 +422,37 @@ components:
       properties: {align: right, spacing_above: none, spacing_below: none}
       type: Label
       layout_properties: {grid_position: 'STVZDF,PTUMER'}
+  - name: column_panel_10
+    properties: {spacing_below: none, spacing_above: none, col_widths: '{"IBCMKQ":30,"JDESMR":3,"HYEUBN":27}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BSLQCM,BAKHOG'}
+    components:
+    - name: column_panel_11
+      properties: {spacing_above: none, spacing_below: none, col_widths: '{"DSGYNE":20,"YIBMAQ":40}'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'UFXYXE,IBCMKQ ZMAABV,UQFLKA'}
+      components:
+      - name: label_15
+        properties: {spacing_above: none, spacing_below: none, text: 'Payment Type:'}
+        type: Label
+        layout_properties: {grid_position: 'UYRKRZ,DSGYNE'}
+      - name: text_box_1
+        properties: {spacing_above: none, spacing_below: none, background: 'theme:Background',
+          border: none, bold: true}
+        type: TextBox
+        layout_properties: {grid_position: 'UYRKRZ,YIBMAQ'}
+    - name: label_16
+      properties: {text: Business Number 899023725RT0001, align: center, spacing_above: none,
+        spacing_below: none}
+      type: Label
+      layout_properties: {grid_position: 'UFXYXE,IBCMKQ VRCSYT,CUCONZ'}
+    - name: spacer_8
+      properties: {height: 32, spacing_above: none, spacing_below: none}
+      type: Spacer
+      layout_properties: {grid_position: 'UFXYXE,JDESMR'}
+    - name: rich_text_3
+      properties: {spacing_above: none, spacing_below: none, content: 'Terms: Payment
+          Due upon Receipt of Invoice. Carrying charges on past due amounts is 2%
+          per month (24% per annum)', align: center}
+      type: RichText
+      layout_properties: {grid_position: 'UFXYXE,HYEUBN'}
