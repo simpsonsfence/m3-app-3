@@ -175,6 +175,14 @@ color: %color:On Primary Container%;
   padding-bottom: 0;
 }
 
+.anvil-role-no-resize {
+  resize:none;
+}
+
+.anvil-role-bold {
+  font-weight: 700;
+}
+
 /* Page structure: App bar with optional left nav */
 .structure {
 /*   display: flex;

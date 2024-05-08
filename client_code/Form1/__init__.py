@@ -7,6 +7,7 @@ import anvil.server
 import anvil.media
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
+from datetime import date
 import time
 
 class Form1(Form1Template):
@@ -33,7 +34,7 @@ class Form1(Form1Template):
     self.full_list = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
     self.part_look_up.items = self.full_list
     self.invoice_number_item = self.part_look_up.selected_value
-    self.label_1.text += self.invoice_number_item['Invoice Number']
+    self.rich_text_2.content = 'DATE ' + date.today().strftime("%B %d, %Y") + '\n' + 'NUMBER ' + self.invoice_number_item['Invoice Number']
     # Any code you write here will run before the form opens.
 
   def drop_down_1_change(self, **event_args):

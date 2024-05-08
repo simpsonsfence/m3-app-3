@@ -3,20 +3,20 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
   data_bindings: []
+  event_bindings: {show: form_show}
 components:
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
-  - name: image_1
-    properties: {source: _/theme/LOGO-Chatham.png, display_mode: shrink_to_fit, height: '50',
-      spacing_above: none, spacing_below: none}
-    type: Image
+  - name: label_10
+    properties: {text: INVOICE, bold: true}
+    type: Label
     layout_properties: {}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Little Beaver Quote ', font_size: null, font: '', spacing_above: small,
+    text: Simpson's Fence (Chatham) Ltd., font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   name: label_1
@@ -26,6 +26,66 @@ components:
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
+  - name: column_panel_4
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'DEMINX,FVZSCC'}
+    components:
+    - name: rich_text_1
+      properties: {content: '1030 Richmond St.
+
+          CHATHAM ON N7M 5J5
+
+          Phone: (519) 354-0540
+
+          Fax: (519) 351-8557
+
+          www.simpsonsfence.com', font: '', role: bold, spacing_above: none, spacing_below: none}
+      type: RichText
+      layout_properties: {grid_position: 'SOLARX,SZLGXD'}
+    - name: spacer_1
+      properties: {height: 32, spacing_above: none, spacing_below: none}
+      type: Spacer
+      layout_properties: {grid_position: 'SOLARX,EVRCWJ'}
+    - name: rich_text_2
+      properties: {content: 'DATE
+
+          NUMBER', align: right, role: bold, spacing_above: none, spacing_below: none}
+      type: RichText
+      layout_properties: {grid_position: 'SOLARX,UERZRI'}
+  - name: column_panel_9
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'UOTDLM,TAWKQV'}
+    components:
+    - name: spacer_6
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'YDDPMJ,ICEVUT'}
+    - name: label_13
+      properties: {text: 'BILL TO:', bold: true}
+      type: Label
+      layout_properties: {grid_position: 'YDDPMJ,UBSWVG YDMTCE,WYCLNS'}
+    - name: text_area_1
+      properties: {background: 'theme:Background', role: no-resize}
+      type: TextArea
+      layout_properties: {grid_position: 'YDDPMJ,UBSWVG FECQTJ,GXJBDH'}
+    - name: spacer_5
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'YDDPMJ,MGHPEL'}
+    - name: label_14
+      properties: {text: 'SHIP TO:', bold: true}
+      type: Label
+      layout_properties: {grid_position: 'YDDPMJ,YARLTB EPDWOE,XGUBGH'}
+    - name: text_area_2
+      properties: {background: 'theme:Background', role: no-resize}
+      type: TextArea
+      layout_properties: {grid_position: 'YDDPMJ,YARLTB KIOCEY,BWEGQB'}
+    - name: spacer_7
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'YDDPMJ,UNGJNU'}
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"BJVXDZ":20,"LSXARU":45,"QWVSOI":10,"DPDBBC":32,"OEWVIA":15,"AFPPEX":45,"PLJJWC":15}',
