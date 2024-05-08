@@ -35,7 +35,8 @@ class Form1(Form1Template):
     self.part_look_up.items = self.full_list
     self.invoice_number_item = self.part_look_up.selected_value
     self.rich_text_2.content = 'DATE ' + date.today().strftime("%B %d, %Y") + '\n' + 'NUMBER ' + self.invoice_number_item['Invoice Number']
-    # Any code you write here will run before the form opens.
+    self.data_grid_2.items = [{}]  
+  # Any code you write here will run before the form opens.
 
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""
@@ -198,7 +199,7 @@ class Form1(Form1Template):
     self.invoice_number_item['Invoice Number'] = '' + str(int(self.invoice_number_item['Invoice Number'])+1)
     self.part_look_up.items = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
     self.invoice_number_item = self.part_look_up.selected_value
-    self.label_1.text = 'Little Beaver Quote ' + self.invoice_number_item['Invoice Number']
+    self.rich_text_2.content = 'DATE ' + date.today().strftime("%B %d, %Y") + '\n' + 'NUMBER ' + self.invoice_number_item['Invoice Number']
     pass
 
   def clear_button_click(self, **event_args):

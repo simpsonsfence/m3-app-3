@@ -1,6 +1,24 @@
 /**
  This CSS implements the Material Design 3 look and feel for Anvil apps.
  **/
+* {
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+}
+
+.anvil-data-row-panel>.data-row-col {
+   border-right: 0.5px solid;
+   border-left: 0.5px solid;
+}
+
+.data-grid {
+  border: 1px solid;
+}
+
 @media print {
 
     @page {
@@ -176,11 +194,29 @@ color: %color:On Primary Container%;
 }
 
 .anvil-role-no-resize {
-  resize:none;
+  resize: none;
 }
 
 .anvil-role-bold {
   font-weight: 700;
+}
+
+.anvil-role-title-small {
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.anvil-role-title-big {
+  font-size: 25px;
+  line-height: 1.1;
+}
+
+.anvil-role-border {
+  border: 0.5px solid !important;
+}
+
+.anvil-role-border-top {
+  border-top: 0.5px solid !important;
 }
 
 /* Page structure: App bar with optional left nav */

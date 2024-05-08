@@ -51,6 +51,10 @@ roles:
   components: [TextBox, TextArea, DatePicker, DropDown]
 - {name: bold, components: null}
 - {name: no-resize}
+- {name: title-small}
+- {name: title-big}
+- {name: border}
+- {name: border-top}
 color_scheme:
   preset_groups:
   - name: Colour Scheme
