@@ -10,127 +10,6 @@ services:
     - capabilities: {canEdit: true, canCopy: true}
       editable: true
       copyable: true
-      embedLink: https://docs.google.com/spreadsheets/d/1NKbZHt2-hOfoSvnNT4VggAkQb6Y8VbP4tqFPSfgSEdw/htmlembed?ouid=115147530008291864448
-      copyRequiresWriterPermission: false
-      python_name: lb_data
-      explicitlyTrashed: false
-      sharedWithMeDate: '2022-07-09T13:35:01.622Z'
-      lastModifyingUser:
-        displayName: Todd Sales
-        kind: drive#user
-        isAuthenticatedUser: true
-        permissionId: '17865141105862477839'
-        emailAddress: simpsonsfencech@gmail.com
-        picture: {url: 'https://lh3.googleusercontent.com/a/ACg8ocILpQWfeO6vyxdZWxAMKLdH30UA2sHrX8XkcfvmSkUs4geObQ=s64'}
-      shared: true
-      createdDate: '2022-05-16T19:55:26.836Z'
-      id: 1NKbZHt2-hOfoSvnNT4VggAkQb6Y8VbP4tqFPSfgSEdw
-      owners:
-      - displayName: jtsales
-        kind: drive#user
-        isAuthenticatedUser: false
-        permissionId: 08772963592628466594
-        emailAddress: jtsales@gmail.com
-        picture: {url: 'https://lh3.googleusercontent.com/a-/ALV-UjWawgRzflYPO_LtRcOukd_s6-J6t6oDldn6fneot4ohpg27ww=s64'}
-      markedViewedByMeDate: '1970-01-01T00:00:00.000Z'
-      spaces: [drive]
-      parents: []
-      labels: {viewed: true, restricted: false, starred: false, hidden: false, trashed: false}
-      iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.spreadsheet
-      permission: roclient
-      selfLink: https://www.googleapis.com/drive/v2/files/1NKbZHt2-hOfoSvnNT4VggAkQb6Y8VbP4tqFPSfgSEdw
-      lastViewedByMeDate: '2024-04-21T16:39:26.266Z'
-      userPermission: {id: me, type: user, role: writer, kind: drive#permission, selfLink: 'https://www.googleapis.com/drive/v2/files/1NKbZHt2-hOfoSvnNT4VggAkQb6Y8VbP4tqFPSfgSEdw/permissions/me',
-        etag: '"fWuNhjrzizh4wbppxQu3UtDqBeY"', pendingOwner: false}
-      lastModifyingUserName: Todd Sales
-      etag: '"MTY4NDY3MzEyMjA1MQ"'
-      kind: drive#file
-      modifiedByMeDate: '2023-05-21T12:45:22.051Z'
-      title: LB data
-      version: '35'
-      appDataContents: false
-      writersCanShare: true
-      fileSize: '1034241'
-      alternateLink: https://docs.google.com/spreadsheets/d/1NKbZHt2-hOfoSvnNT4VggAkQb6Y8VbP4tqFPSfgSEdw/edit?usp=drivesdk
-      mimeType: application/vnd.google-apps.spreadsheet
-      modifiedDate: '2023-05-21T12:45:22.051Z'
-      quotaBytesUsed: '1034241'
-      exportLinks: {x-vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1NKbZHt2-hOfoSvnNT4VggAkQb6Y8VbP4tqFPSfgSEdw&exportFormat=ods',
-        tab-separated-values: 'https://docs.google.com/spreadsheets/export?id=1NKbZHt2-hOfoSvnNT4VggAkQb6Y8VbP4tqFPSfgSEdw&exportFormat=tsv',
-        pdf: 'https://docs.google.com/spreadsheets/export?id=1NKbZHt2-hOfoSvnNT4VggAkQb6Y8VbP4tqFPSfgSEdw&exportFormat=pdf',
-        vnd.openxmlformats-officedocument.spreadsheetml.sheet: 'https://docs.google.com/spreadsheets/export?id=1NKbZHt2-hOfoSvnNT4VggAkQb6Y8VbP4tqFPSfgSEdw&exportFormat=xlsx',
-        csv: 'https://docs.google.com/spreadsheets/export?id=1NKbZHt2-hOfoSvnNT4VggAkQb6Y8VbP4tqFPSfgSEdw&exportFormat=csv',
-        zip: 'https://docs.google.com/spreadsheets/export?id=1NKbZHt2-hOfoSvnNT4VggAkQb6Y8VbP4tqFPSfgSEdw&exportFormat=zip',
-        vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1NKbZHt2-hOfoSvnNT4VggAkQb6Y8VbP4tqFPSfgSEdw&exportFormat=ods'}
-      thumbnailLink: https://lh3.googleusercontent.com/drive-storage/AJQWtBMRL8Ob5Zj0K7ODX3Oq-Q0nUsH60IVZrI08uMHGSAwXIA78JuU82nai-lx0q-uaI55Yhhalb5UDmD5ca5fRPGwyq-fEV8yP4o4EwQ2IoreMfkvR2N5Hr9wtfl2owQ=s220
-      sharingUser:
-        displayName: jtsales
-        kind: drive#user
-        isAuthenticatedUser: false
-        permissionId: 08772963592628466594
-        emailAddress: jtsales@gmail.com
-        picture: {url: 'https://lh3.googleusercontent.com/a-/ALV-UjWawgRzflYPO_LtRcOukd_s6-J6t6oDldn6fneot4ohpg27ww=s64'}
-      ownerNames: [jtsales]
-    - capabilities: {canEdit: true, canCopy: true}
-      editable: true
-      copyable: true
-      embedLink: https://docs.google.com/spreadsheets/d/1_OKAsqZluwFk2ScWSHln9kxnzdM8qL5t8iSRn-qiMvM/htmlembed?ouid=115147530008291864448
-      copyRequiresWriterPermission: false
-      python_name: lbdata
-      explicitlyTrashed: false
-      lastModifyingUser:
-        displayName: Todd Sales
-        kind: drive#user
-        isAuthenticatedUser: true
-        permissionId: '17865141105862477839'
-        emailAddress: simpsonsfencech@gmail.com
-        picture: {url: 'https://lh3.googleusercontent.com/a/ACg8ocILpQWfeO6vyxdZWxAMKLdH30UA2sHrX8XkcfvmSkUs4geObQ=s64'}
-      shared: true
-      createdDate: '2023-05-21T13:15:17.343Z'
-      id: 1_OKAsqZluwFk2ScWSHln9kxnzdM8qL5t8iSRn-qiMvM
-      owners:
-      - displayName: Todd Sales
-        kind: drive#user
-        isAuthenticatedUser: true
-        permissionId: '17865141105862477839'
-        emailAddress: simpsonsfencech@gmail.com
-        picture: {url: 'https://lh3.googleusercontent.com/a/ACg8ocILpQWfeO6vyxdZWxAMKLdH30UA2sHrX8XkcfvmSkUs4geObQ=s64'}
-      markedViewedByMeDate: '1970-01-01T00:00:00.000Z'
-      spaces: [drive]
-      parents:
-      - {selfLink: 'https://www.googleapis.com/drive/v2/files/1_OKAsqZluwFk2ScWSHln9kxnzdM8qL5t8iSRn-qiMvM/parents/0ANo2mBKLzWxOUk9PVA',
-        id: 0ANo2mBKLzWxOUk9PVA, isRoot: true, kind: drive#parentReference, parentLink: 'https://www.googleapis.com/drive/v2/files/0ANo2mBKLzWxOUk9PVA'}
-      labels: {viewed: true, restricted: false, starred: false, hidden: false, trashed: false}
-      iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.spreadsheet
-      selfLink: https://www.googleapis.com/drive/v2/files/1_OKAsqZluwFk2ScWSHln9kxnzdM8qL5t8iSRn-qiMvM
-      lastViewedByMeDate: '2024-04-01T22:44:50.710Z'
-      userPermission: {id: me, type: user, role: owner, kind: drive#permission, selfLink: 'https://www.googleapis.com/drive/v2/files/1_OKAsqZluwFk2ScWSHln9kxnzdM8qL5t8iSRn-qiMvM/permissions/me',
-        etag: '"s0S_N3LqmW5Q68cToXtmcyAHzio"', pendingOwner: false}
-      lastModifyingUserName: Todd Sales
-      etag: '"MTcxMjAxMTQ1NzM2Ng"'
-      kind: drive#file
-      modifiedByMeDate: '2024-04-01T22:44:17.366Z'
-      title: LBData
-      version: '31'
-      appDataContents: false
-      writersCanShare: true
-      fileSize: '104549'
-      alternateLink: https://docs.google.com/spreadsheets/d/1_OKAsqZluwFk2ScWSHln9kxnzdM8qL5t8iSRn-qiMvM/edit?usp=drivesdk
-      mimeType: application/vnd.google-apps.spreadsheet
-      modifiedDate: '2024-04-01T22:44:17.366Z'
-      quotaBytesUsed: '104549'
-      exportLinks: {x-vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1_OKAsqZluwFk2ScWSHln9kxnzdM8qL5t8iSRn-qiMvM&exportFormat=ods',
-        tab-separated-values: 'https://docs.google.com/spreadsheets/export?id=1_OKAsqZluwFk2ScWSHln9kxnzdM8qL5t8iSRn-qiMvM&exportFormat=tsv',
-        pdf: 'https://docs.google.com/spreadsheets/export?id=1_OKAsqZluwFk2ScWSHln9kxnzdM8qL5t8iSRn-qiMvM&exportFormat=pdf',
-        vnd.openxmlformats-officedocument.spreadsheetml.sheet: 'https://docs.google.com/spreadsheets/export?id=1_OKAsqZluwFk2ScWSHln9kxnzdM8qL5t8iSRn-qiMvM&exportFormat=xlsx',
-        csv: 'https://docs.google.com/spreadsheets/export?id=1_OKAsqZluwFk2ScWSHln9kxnzdM8qL5t8iSRn-qiMvM&exportFormat=csv',
-        zip: 'https://docs.google.com/spreadsheets/export?id=1_OKAsqZluwFk2ScWSHln9kxnzdM8qL5t8iSRn-qiMvM&exportFormat=zip',
-        vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1_OKAsqZluwFk2ScWSHln9kxnzdM8qL5t8iSRn-qiMvM&exportFormat=ods'}
-      thumbnailLink: https://lh3.googleusercontent.com/drive-storage/AJQWtBN1VJhMF-QmMBZFyY0ZcUNpBU3UcqOx2ancp6QX73oh7ypzBPCl1LrMWitZ81MKa9x3a4hyw4dbx2gNVdkGLUgNs-gkVm104of1xyb8Ds2eEx8KEFC7BbH-NYLt7w=s220
-      ownerNames: [Todd Sales]
-    - capabilities: {canEdit: true, canCopy: true}
-      editable: true
-      copyable: true
       embedLink: https://docs.google.com/spreadsheets/d/1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4/htmlembed?ouid=115147530008291864448
       copyRequiresWriterPermission: false
       python_name: lbdata24
@@ -160,21 +39,21 @@ services:
       labels: {viewed: true, restricted: false, starred: false, hidden: false, trashed: false}
       iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.spreadsheet
       selfLink: https://www.googleapis.com/drive/v2/files/1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4
-      lastViewedByMeDate: '2024-04-27T14:22:16.132Z'
+      lastViewedByMeDate: '2024-05-08T12:06:14.886Z'
       userPermission: {id: me, type: user, role: owner, kind: drive#permission, selfLink: 'https://www.googleapis.com/drive/v2/files/1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4/permissions/me',
         etag: '"5f6_utyf4zb4__GBfaj79Wit7wM"', pendingOwner: false}
       lastModifyingUserName: Todd Sales
-      etag: '"MTcxNDIyNzczNjEzMg"'
+      etag: '"MTcxNTA4Njk4MTM2OA"'
       kind: drive#file
-      modifiedByMeDate: '2024-04-27T14:22:16.132Z'
+      modifiedByMeDate: '2024-05-07T13:03:01.368Z'
       title: LBdata24
-      version: '8'
+      version: '60'
       appDataContents: false
       writersCanShare: true
       fileSize: '728420'
       alternateLink: https://docs.google.com/spreadsheets/d/1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4/edit?usp=drivesdk
       mimeType: application/vnd.google-apps.spreadsheet
-      modifiedDate: '2024-04-27T14:22:16.132Z'
+      modifiedDate: '2024-05-07T13:03:01.368Z'
       quotaBytesUsed: '728420'
       exportLinks: {x-vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4&exportFormat=ods',
         tab-separated-values: 'https://docs.google.com/spreadsheets/export?id=1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4&exportFormat=tsv',
@@ -183,9 +62,9 @@ services:
         csv: 'https://docs.google.com/spreadsheets/export?id=1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4&exportFormat=csv',
         zip: 'https://docs.google.com/spreadsheets/export?id=1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4&exportFormat=zip',
         vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4&exportFormat=ods'}
-      thumbnailLink: https://lh3.googleusercontent.com/drive-storage/AJQWtBOep1XaMFUQs1Mhy3vrMcWHAbXcI1552pV4J7cX0TuxTu8BBK04Q08ZmFQCMSVaiw-PwCbt6k8mlBDBPGHQpgdKIbWzLUevUqQ08JMeXTqisxJpfJX5hLxzVHG7IQ=s220
+      thumbnailLink: https://lh3.googleusercontent.com/drive-storage/AJQWtBMDtaSqwSoQ0wg-mMrVRF4jsuNYjTrCjvyQJWAFqwyT32vqLyyNFTALaEyxRcTngU4V6zPuIdFoFHV0nX1LSu5tskIuyHUPmWW9x_i2NZzQdD3GPLdGuGXqt2rRXA=s220
       ownerNames: [Todd Sales]
-  server_config: {enc_delegation_refresh_token: YhzzmcdXd1fgfRWvHWnrFRzrt+VfuoOXiCYPVUeZ9Fq3aBMTbKS0P+T19xjqpx3vu2pjYtme6X7NDWq+2meU5LLXX8dgQZjm5+hWt21/ql5eFXxO4yadtpKddztvio0Hx5dj5QnbCOGeFbLpM2EhOUCgKRZUeAGZi52DTO3iM6bmihWedXKCOUy57zN+th5hYN83Bi5WvLSoSWkPSoJT0tiOqegh0veZX1Bq2kskaNenlWOebCcfuTxsooQf/HX/3RMNPt3mnFPTYHg34YyuVCvtXwNXtHUdP74w8rhdszs/pcWFCpD4QdWMbE9Djw==}
+  server_config: {enc_delegation_refresh_token: 3VHg4EbU1D7+PHdu3umVYBBPuG4wheaZcECOPd5uFV6BV6NI16MkxzwUSvczfuinn30sALFPtki1Fejy3vkAApZBfh/SOHJcGq4NOMvk+do84u+kNSerNBkd0bs8If5K4WffQZO5/mlDt0Nhe/LSKv4Uk8MXYfd4MQXF5hdfeGm8PJ8r9CGbag0jhxMtpfkYZIJGx6DW07HYd9f57i2TD17XNu+j3egiwDPmGAIL/CMPzONKL2pNwG6bhk6SM9Al2zwfMhMqIrIw9oAB3LQmyXaGgQK6vON10wP/ZWcfn0ggujlRLzTJqRQaPJGvXg==}
 package_name: M3_App_3
 allow_embedding: true
 name: Little Beaver Quote Creator
