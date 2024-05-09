@@ -10,96 +10,12 @@ components:
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
-  - name: column_panel_4
-    properties: {col_widths: '{"SZLGXD":20,"EVRCWJ":25,"UERZRI":15}'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'DEMINX,FVZSCC'}
-    components:
-    - type: Label
-      properties: {role: title-small, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: Simpson's Fence (Chatham) Ltd., font_size: null, font: '',
-        spacing_above: none, icon_align: left, spacing_below: none, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
-      name: label_1
-      layout_properties: {grid_position: 'SOLARX,SZLGXD VYUXEA,BKNNOH'}
-    - name: rich_text_1
-      properties: {content: '1030 Richmond St.
-
-          CHATHAM ON N7M 5J5
-
-          Phone: (519) 354-0540
-
-          Fax: (519) 351-8557
-
-          www.simpsonsfence.com', font: '', role: bold, spacing_above: none, spacing_below: none}
-      type: RichText
-      layout_properties: {grid_position: 'SOLARX,SZLGXD JMFWPE,YSHUNU'}
-    - name: spacer_1
-      properties: {height: 32, spacing_above: none, spacing_below: none}
-      type: Spacer
-      layout_properties: {grid_position: 'SOLARX,EVRCWJ'}
-    - name: label_10
-      properties: {text: INVOICE, bold: true, align: left, spacing_above: none, spacing_below: none,
-        role: title-big}
-      type: Label
-      layout_properties: {grid_position: 'SOLARX,UERZRI GKBICC,BSZHLM'}
-    - name: rich_text_2
-      properties: {content: 'DATE
-
-          NUMBER', align: left, role: bold, spacing_above: none, spacing_below: none}
-      type: RichText
-      layout_properties: {grid_position: 'SOLARX,UERZRI NHAJKG,RFZMFU'}
-  - name: column_panel_9
-    properties: {col_widths: '{"MGHPEL":18,"UNGJNU":9,"YSPJVH":2,"GMKLEO":9,"FXVUVD":9}'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'UOTDLM,TAWKQV'}
-    components:
-    - name: spacer_5_copy
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'YDDPMJ,YSPJVH'}
-    - name: column_panel_12
-      properties: {}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'YDDPMJ,GMKLEO'}
-      components:
-      - name: label_13
-        properties: {text: 'BILL TO:', bold: true, spacing_above: none, spacing_below: none}
-        type: Label
-        layout_properties: {grid_position: 'WKGUMO,IBWLVB'}
-      - name: text_area_1
-        properties: {background: 'theme:Background', role: no-resize, border: none,
-          spacing_above: none, spacing_below: none, height: 65, placeholder: Bill to here}
-        type: TextArea
-        layout_properties: {grid_position: 'JKYHGS,MJZLDO'}
-    - name: spacer_5
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'YDDPMJ,MGHPEL'}
-    - name: column_panel_13
-      properties: {}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'YDDPMJ,FXVUVD'}
-      components:
-      - name: label_14
-        properties: {text: 'SHIP TO:', bold: true, spacing_above: none, spacing_below: none}
-        type: Label
-        layout_properties: {grid_position: 'TTTHSR,HGXBBR'}
-      - name: text_area_2
-        properties: {background: 'theme:Background', role: no-resize, border: none,
-          spacing_above: none, spacing_below: none, height: 65, placeholder: Ship to here}
-        type: TextArea
-        layout_properties: {grid_position: 'CKTWBN,EDLFQU'}
-    - name: spacer_7
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'YDDPMJ,UNGJNU'}
   - type: ColumnPanel
     properties: {role: border-bottom, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"BJVXDZ":20,"LSXARU":45,"QWVSOI":10,"DPDBBC":32,"OEWVIA":15,"AFPPEX":45,"PLJJWC":15,"PEUTTR":20,"NWRSJK":30}',
       spacing_below: none, background: ''}
     name: form_panel
-    layout_properties: {grid_position: 'GVOSZU,PZJKHM'}
+    layout_properties: {grid_position: 'GJURRN,DZBALF'}
     components:
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
@@ -396,6 +312,90 @@ components:
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'SOFJVS,NWRSJK'}
+  - name: column_panel_4
+    properties: {col_widths: '{"SZLGXD":20,"EVRCWJ":25,"UERZRI":15}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'DEMINX,FVZSCC'}
+    components:
+    - type: Label
+      properties: {role: title-small, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Simpson's Fence (Chatham) Ltd., font_size: null, font: '',
+        spacing_above: none, icon_align: left, spacing_below: none, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'SOLARX,SZLGXD VYUXEA,BKNNOH'}
+    - name: rich_text_1
+      properties: {content: '1030 Richmond St.
+
+          CHATHAM ON N7M 5J5
+
+          Phone: (519) 354-0540
+
+          Fax: (519) 351-8557
+
+          www.simpsonsfence.com', font: '', role: bold, spacing_above: none, spacing_below: none}
+      type: RichText
+      layout_properties: {grid_position: 'SOLARX,SZLGXD JMFWPE,YSHUNU'}
+    - name: spacer_1
+      properties: {height: 32, spacing_above: none, spacing_below: none}
+      type: Spacer
+      layout_properties: {grid_position: 'SOLARX,EVRCWJ'}
+    - name: label_10
+      properties: {text: INVOICE, bold: true, align: left, spacing_above: none, spacing_below: none,
+        role: title-big}
+      type: Label
+      layout_properties: {grid_position: 'SOLARX,UERZRI GKBICC,BSZHLM'}
+    - name: rich_text_2
+      properties: {content: 'DATE
+
+          NUMBER', align: left, role: bold, spacing_above: none, spacing_below: none}
+      type: RichText
+      layout_properties: {grid_position: 'SOLARX,UERZRI NHAJKG,RFZMFU'}
+  - name: column_panel_9
+    properties: {col_widths: '{"MGHPEL":14,"UNGJNU":5,"YSPJVH":5,"GMKLEO":19,"FXVUVD":17}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'UOTDLM,TAWKQV'}
+    components:
+    - name: spacer_5_copy
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'YDDPMJ,YSPJVH'}
+    - name: column_panel_12
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'YDDPMJ,GMKLEO'}
+      components:
+      - name: label_13
+        properties: {text: 'BILL TO:', bold: true, spacing_above: none, spacing_below: none}
+        type: Label
+        layout_properties: {grid_position: 'WKGUMO,IBWLVB'}
+      - name: text_area_1
+        properties: {background: 'theme:Background', role: no-resize, border: none,
+          spacing_above: none, spacing_below: none, height: 65, placeholder: Bill to here}
+        type: TextArea
+        layout_properties: {grid_position: 'JKYHGS,MJZLDO'}
+    - name: spacer_5
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'YDDPMJ,MGHPEL'}
+    - name: column_panel_13
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'YDDPMJ,FXVUVD'}
+      components:
+      - name: label_14
+        properties: {text: 'SHIP TO:', bold: true, spacing_above: none, spacing_below: none}
+        type: Label
+        layout_properties: {grid_position: 'TTTHSR,HGXBBR'}
+      - name: text_area_2
+        properties: {background: 'theme:Background', role: no-resize, border: none,
+          spacing_above: none, spacing_below: none, height: 65, placeholder: Ship to here}
+        type: TextArea
+        layout_properties: {grid_position: 'CKTWBN,EDLFQU'}
+    - name: spacer_7
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'YDDPMJ,UNGJNU'}
   - name: column_panel_10
     properties: {border: 1px solid, spacing_above: none, spacing_below: none, role: border-bottom}
     type: ColumnPanel
@@ -404,10 +404,10 @@ components:
     - name: data_grid_2
       properties:
         columns:
-        - {id: JKSDUP, title: P.O. NUMBER, data_key: column_1}
-        - {id: VJQQOR, title: SALESPERSON, data_key: column_2}
-        - {id: OJLQEN, title: ORDER DATE, data_key: column_3}
-        - {id: LFHXAA, data_key: column_4, title: REQ. DATE}
+        - {id: JKSDUP, title: P.O. NUMBER, data_key: column_1, width: 189, expand: false}
+        - {id: VJQQOR, title: SALESPERSON, data_key: column_2, width: 176, expand: false}
+        - {id: OJLQEN, title: ORDER DATE, data_key: column_3, width: 109, expand: false}
+        - {id: LFHXAA, data_key: column_4, title: REQ. DATE, width: 99, expand: false}
         - {id: DBWHLU, data_key: column_5, title: ORDER NUMBER}
         role: [border-top, border-bottom]
         rows_per_page: 50
@@ -418,14 +418,18 @@ components:
       type: DataGrid
       components:
       - name: repeating_panel_2
-        properties: {item_template: Form1.RowTemplate2, role: border, spacing_above: none,
-          spacing_below: none}
+        properties:
+          item_template: Form1.RowTemplate2
+          role: [border, smaller-text]
+          spacing_above: none
+          spacing_below: none
         type: RepeatingPanel
+        layout_properties: {}
       - name: data_grid_3
         properties:
           columns:
-          - {id: JKSDUP, title: F.O.B., data_key: column_1}
-          - {id: VJQQOR, title: SHIP VIA, data_key: column_2}
+          - {id: JKSDUP, title: F.O.B., data_key: column_1, width: 190, expand: false}
+          - {id: VJQQOR, title: SHIP VIA, data_key: column_2, width: 253, expand: false}
           - {id: OJLQEN, title: TERMS, data_key: column_3}
           role: border-top
           spacing_above: none
@@ -434,37 +438,47 @@ components:
         type: DataGrid
         components:
         - name: repeating_panel_3
-          properties: {item_template: Form1.RowTemplate3, role: border, spacing_above: none,
-            spacing_below: none}
+          properties:
+            item_template: Form1.RowTemplate3
+            role: [border, smaller-text]
+            spacing_above: none
+            spacing_below: none
           type: RepeatingPanel
           layout_properties: {}
         - name: data_grid_1
           properties:
             columns:
-            - {id: JKSDUP, title: Item Number, data_key: item_number_spot, width: 107,
+            - {id: JKSDUP, title: Item Num., data_key: item_number_spot, width: 81,
               expand: false}
-            - {id: VJQQOR, title: Description, data_key: description_spot, width: 252,
+            - {id: VJQQOR, title: Description, data_key: item_description_spot, width: 146,
               expand: false}
-            - {id: OJLQEN, title: Unit Price, data_key: unit_price_spot, width: 106,
+            - {id: OJLQEN, title: UOM, data_key: uom_spot, width: 65, expand: false}
+            - {id: RXRYNW, data_key: quantity_spot, title: Qty. Req., width: 69, expand: false}
+            - {id: RNVHPW, data_key: shipped_spot, title: Shipped, width: 65, expand: false}
+            - {id: PQSMVD, data_key: bo_spot, title: B.O., width: 64, expand: false}
+            - {id: ATLXSR, data_key: unit_price_spot, title: Unit Price, width: 98,
               expand: false}
-            - {id: RXRYNW, data_key: quantity_spot, title: Qty., width: 80, expand: false}
-            - {id: RNVHPW, data_key: extended_price_spot, title: Extended Price}
+            - {id: QTDMMI, data_key: extended_price_spot, title: Extended Price}
             show_page_controls: false
             spacing_above: none
             spacing_below: none
-            role: border-top
+            role: [border-top, small-text, small-text-constant]
             auto_header: true
             border: ''
           type: DataGrid
           components:
           - name: repeating_panel_1
-            properties: {item_template: Form1.RowTemplate1, spacing_above: none, spacing_below: none,
-              role: set-height}
+            properties:
+              item_template: Form1.RowTemplate1
+              spacing_above: none
+              spacing_below: none
+              role: [set-height, smaller-text, small-text-constant]
             type: RepeatingPanel
             layout_properties: {}
             data_bindings: []
           layout_properties: {}
           data_bindings: []
+        layout_properties: {}
       layout_properties: {grid_position: 'URUWKB,XDRGZG'}
   - name: column_panel_11
     properties: {col_widths: '{"JXEPKJ":15,"JARRPN":30,"FFXWHX":15}', spacing_above: large}
@@ -493,7 +507,7 @@ components:
       type: RichText
       layout_properties: {grid_position: 'YYKBCM,UTRFQR'}
   - name: column_panel_14
-    properties: {spacing_above: none, spacing_below: none}
+    properties: {spacing_above: none, spacing_below: none, col_widths: '{"VODHSF":30,"UDERVL":30}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'AZDAPB,CKHAZT'}
     components:
@@ -513,20 +527,23 @@ components:
       type: Label
       layout_properties: {grid_position: 'TYGGUV,VODHSF GKKWIV,UWZKTD'}
     - name: linear_panel_1
-      properties: {spacing_above: none, spacing_below: none, role: border}
+      properties:
+        spacing_above: none
+        spacing_below: none
+        role: [border, smaller-text]
       type: LinearPanel
       layout_properties: {grid_position: 'TYGGUV,UDERVL'}
       components:
       - name: net_amount_box
-        properties: {align: left, spacing_above: none, spacing_below: none, role: null}
+        properties: {align: left, spacing_above: small, spacing_below: none, role: null}
         type: Label
         layout_properties: {}
       - name: hst_box
-        properties: {align: left, spacing_above: none, spacing_below: none, role: null}
+        properties: {align: left, spacing_above: small, spacing_below: none, role: null}
         type: Label
         layout_properties: {}
       - name: total_due_box
-        properties: {align: left, spacing_above: none, spacing_below: none, role: border,
+        properties: {align: left, spacing_above: small, spacing_below: none, role: border,
           text: ''}
         type: Label
         layout_properties: {}

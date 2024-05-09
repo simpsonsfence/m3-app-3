@@ -47,8 +47,22 @@
       display: none;
     }
 
+    .anvil-role-set-height {
+      height: 32vh;
+    }
+
+    .anvil-role-small-text {
+      font-size: 12px;
+    }
+  .anvil-role-smaller-text {
+      font-size: 10px !important;
+    }
+
 }
 
+.anvil-role-small-text-constant {
+      font-size: 12px;
+    }
 
 /* Stop panel-cols cutting off drop shadows */
 .anvil-panel-col {
@@ -241,9 +255,7 @@ color: %color:On Primary Container%;
   padding-bottom: 0px !important;
 }
 
-.anvil-role-set-height {
-  height: 32vh;
-}
+
 
 .anvil-data-row-panel>.data-row-col .anvil-role-no-border {
   border: 0 !important;

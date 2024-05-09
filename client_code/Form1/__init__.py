@@ -21,14 +21,15 @@ class Form1(Form1Template):
   total_cost = ""
   markup = ""
   unit_price = ""
-  exntended_price = ""
-  tax = ""
+  extended_price = ""
+  net_amount = ""
+  hst = ""
   total_due = ""
-  exntended_price_float = 0
-  tax_float = 0
+  extended_price_float = 0
+  net_amount_float = 0
+  hst_float = 0
   total_due_float = 0
   markup_percentage_type = 0
-  net_amount_float = 0
   full_list = []
   
   def __init__(self, **properties):
@@ -39,6 +40,9 @@ class Form1(Form1Template):
     self.part_look_up.items = self.full_list
     self.invoice_number_item = self.part_look_up.selected_value
     self.rich_text_2.content = 'DATE ' + date.today().strftime("%B %d, %Y") + '\n' + 'NUMBER ' + self.invoice_number_item['Invoice Number']
+    self.repeating_panel_1.items = [{}]
+    for x in range(11):
+      self.repeating_panel_1.items.append({})
     self.repeating_panel_2.items = [{}]  
     self.repeating_panel_2.items = self.repeating_panel_2.items
     self.repeating_panel_3.items = [{}]  
@@ -86,7 +90,7 @@ class Form1(Form1Template):
     self.markup_box.text = self.markup
     self.unit_price_box.text = self.unit_price
     self.extended_price_box.text = self.unit_price
-    self.exntended_price = float(self.unit_price.lstrip('$ ').rstrip(' ').replace(",", ""))
+    self.extended_price = float(self.unit_price.lstrip('$ ').rstrip(' ').replace(",", ""))
 
   def set_selling(self):
     """Float variables to total up costs"""
@@ -124,11 +128,11 @@ class Form1(Form1Template):
     self.unit_price_box.text = self.unit_price
 
     """Setting total price to display"""
-    self.exntended_price_float = unit_price_float*int(self.item_amount.text)
+    self.extended_price_float = unit_price_float*int(self.item_amount.text)
     
     
-    self.exntended_price = "$ " + '{:,.2f}'.format(self.exntended_price_float)
-    self.extended_price_box.text = self.exntended_price
+    self.extended_price = "$ " + '{:,.2f}'.format(self.extended_price_float)
+    self.extended_price_box.text = self.extended_price
     pass
       
   def freight_check_change(self, **event_args):
@@ -179,32 +183,32 @@ class Form1(Form1Template):
   def add_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.set_selling()
-    
+    for x in range(12):
+      self.repeating_panel_1.items.pop()
     try:
-      self.repeating_panel_1.items.append({'item_number_spot': self.item_number, 'item_description_spot': self.item_description, 'unit_price_spot': self.unit_price, 'num': self.item_amount.text, 'extended_price_spot': self.exntended_price})
-    
+      self.repeating_panel_1.items.append({'item_number_spot': self.item_number, 'item_description_spot': self.item_description, 'unit_price_spot': self.unit_price, 'quantity_spot': self.item_amount.text, 'extended_price_spot': self.extended_price})
+      
     except AttributeError:
       self.repeating_panel_1.items = [
-        {'item_number_spot': self.item_number, 'item_description_spot': self.item_description, 'unit_price_spot': self.unit_price, 'quantity_spot': self.item_amount.text, 'extended_price_spot': self.exntended_price}
+        {'item_number_spot': self.item_number, 'item_description_spot': self.item_description, 'unit_price_spot': self.unit_price, 'quantity_spot': self.item_amount.text, 'extended_price_spot': self.extended_price}
       ]
-    
+    for x in range(12):
+      self.repeating_panel_1.items.append({})
     self.repeating_panel_1.items = self.repeating_panel_1.items
-    self.net_amount_float += self.exntended_price_float
-    self.net_amount_box.text =  ' $ ' + '{:,.2f}'.format(self.net_amount_float) + "           "
+    self.net_amount_float += self.extended_price_float
+    self.net_amount_box.text =  ' $ ' + '{:,.2f}'.format(self.net_amount_float)
+    self.hst_float = self.net_amount_float*0.13
+    self.hst_box.text =  ' $ ' + '{:,.2f}'.format(self.hst_float)
+    self.total_due_float = self.net_amount_float + self.hst_float
+    self.total_due_box.text =  ' $ ' + '{:,.2f}'.format(self.total_due_float)
     
     pass
 
   def generate_invoice_click(self, **event_args):
     """This method is called when the button is clicked"""  
     self.form_panel.visible = False
-    for x in range(12):
-      self.repeating_panel_1.items.append({'item_number_spot': '', 'item_description_spot': '', 'unit_price_spot': '', 'quantity_spot': '', 'extended_price_spot': ''})
-    self.repeating_panel_1.items = self.repeating_panel_1.items
-    self.call_js('printPage', self.data_grid_2)
+    self.call_js('printPage')
     self.form_panel.visible = True
-    for x in range(12):
-      self.repeating_panel_1.items.pop()
-    self.repeating_panel_1.items = self.repeating_panel_1.items
     self.invoice_number_item['Invoice Number'] = '' + str(int(self.invoice_number_item['Invoice Number'])+1)
     self.part_look_up.items = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
     self.invoice_number_item = self.part_look_up.selected_value
@@ -213,11 +217,15 @@ class Form1(Form1Template):
 
   def clear_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.repeating_panel_1.items = []
-    self.net_amount_float = 0
-    self.net_amount_float = 0
+    self.repeating_panel_1.items = [{}]
+    for x in range(11):
+      self.repeating_panel_1.items.append({})
     self.net_amount_float = 0
     self.net_amount_box.text = ' $ ' + '{:,.2f}'.format(self.net_amount_float)
+    self.hst_float = 0
+    self.hst_box.text = ' $ ' + '{:,.2f}'.format(self.hst_float)
+    self.total_due_float = 0
+    self.total_due_box.text = ' $ ' + '{:,.2f}'.format(self.total_due_float)
     pass
 
   def search_list(self):
@@ -248,9 +256,22 @@ class Form1(Form1Template):
 
   def remove_button_click(self, **event_args):
     """This method is called when the button is clicked"""
+    for x in range(12):
+      self.repeating_panel_1.items.pop()
     self.net_amount_float -= float(self.repeating_panel_1.items[-1]['extended_price_spot'].lstrip('$ ').rstrip(' ').replace(",", ""))
     self.net_amount_box.text =  ' $ ' + '{:,.2f}'.format(self.net_amount_float)
+    self.hst_float = self.net_amount_float*0.13
+    self.hst_box.text =  ' $ ' + '{:,.2f}'.format(self.hst_float)
+    self.total_due_float = self.net_amount_float + self.hst_float
+    self.total_due_box.text =  ' $ ' + '{:,.2f}'.format(self.total_due_float)
     self.repeating_panel_1.items.pop()
+    try:
+      for x in range(12):
+        self.repeating_panel_1.items.append({})
+    except AttributeError:
+      self.repeating_panel_1.items = [{}]
+      for x in range(11):
+        self.repeating_panel_1.items.append({})
     self.repeating_panel_1.items = self.repeating_panel_1.items
     pass
 
@@ -267,4 +288,8 @@ class Form1(Form1Template):
     self.repeating_panel_1.items = self.repeating_panel_1.items
     self.net_amount_float += float(self.previous_net_amount.text)
     self.net_amount_box.text =  ' $ ' + '{:,.2f}'.format(self.net_amount_float)
+    self.hst_float = self.net_amount_float*0.13
+    self.hst_box.text =  ' $ ' + '{:,.2f}'.format(self.hst_float)
+    self.total_due_float = self.net_amount_float + self.hst_float
+    self.total_due_box.text =  ' $ ' + '{:,.2f}'.format(self.total_due_float)
     pass
