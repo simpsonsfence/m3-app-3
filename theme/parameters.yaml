@@ -55,6 +55,9 @@ roles:
 - {name: title-big}
 - {name: border}
 - {name: border-top}
+- {name: no-border}
+- {name: remove-top-space}
+- {name: no-scroll}
 color_scheme:
   preset_groups:
   - name: Colour Scheme

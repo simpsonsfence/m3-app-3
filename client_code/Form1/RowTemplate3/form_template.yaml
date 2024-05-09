@@ -16,13 +16,3 @@ components:
     spacing_below: none}
   type: TextBox
   layout_properties: {column: OJLQEN}
-- name: text_box_1_copy_3
-  properties: {border: none, background: 'theme:Background', spacing_above: none,
-    spacing_below: none}
-  type: TextBox
-  layout_properties: {column: LFHXAA}
-- name: text_box_1_copy_4
-  properties: {border: none, background: 'theme:Background', spacing_above: none,
-    spacing_below: none}
-  type: TextBox
-  layout_properties: {column: DBWHLU}

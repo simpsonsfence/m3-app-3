@@ -15,8 +15,18 @@
    border-left: 0.5px solid;
 }
 
+.anvil-data-grid>.anvil-roles-no-border>.anvil-data-row-panel>.data-row-col {
+   border-right: 0.5px solid;
+   border-left: none !important;
+}
+
+
 .data-grid {
   border: 1px solid;
+}
+
+::-webkit-scrollbar {
+      display: none;
 }
 
 @media print {
@@ -217,6 +227,14 @@ color: %color:On Primary Container%;
 
 .anvil-role-border-top {
   border-top: 0.5px solid !important;
+  overflow: visible !important;
+  margin-bottom: -14px !important;
+  padding-bottom: 0px !important;
+}
+
+
+.anvil-data-row-panel>.data-row-col .anvil-role-no-border {
+  border: 0 !important;
 }
 
 /* Page structure: App bar with optional left nav */
