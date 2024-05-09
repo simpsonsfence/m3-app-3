@@ -14,21 +14,21 @@ class Form1(Form1Template):
 
   """Initiating variables globally so they can be accesed from multiple functions"""
   item_number = ""
-  descript = ""
+  item_description = ""
   cost_after = ""
   freight = ""
   fin_cost = ""
   total_cost = ""
   markup = ""
-  selling = ""
-  total = ""
+  unit_price = ""
+  exntended_price = ""
   tax = ""
-  final = ""
-  total_float = 0
+  total_due = ""
+  exntended_price_float = 0
   tax_float = 0
-  final_float = 0
+  total_due_float = 0
   markup_percentage_type = 0
-  total_price = 0
+  net_amount_float = 0
   full_list = []
   
   def __init__(self, **properties):
@@ -56,7 +56,7 @@ class Form1(Form1Template):
     """Getting the product info from the spreadsheet"""
     part_selected = self.part_look_up.selected_value
     self.item_number = part_selected['Item Number']
-    self.descript = part_selected['Description']
+    self.item_description = part_selected['Description']
     list_price = part_selected['List Price']
     weight = part_selected['Weight']
     discount = part_selected['Discounted']
@@ -67,7 +67,7 @@ class Form1(Form1Template):
     self.total_cost = part_selected['Total Cost']
     self.markup = part_selected['Markup']
     self.item_amount.text = 1
-    self.selling = part_selected['SELLING PRICE']
+    self.unit_price = part_selected['SELLING PRICE']
     self.markup_percentage_type = int(part_selected['Markup Type'])
     if self.markup_percentage_type == 1:
       self.markup_percentage.text = 80
@@ -75,7 +75,7 @@ class Form1(Form1Template):
       self.markup_percentage.text = 46.5
 
     """Set the amounts into the displayed text to veiw"""
-    self.descript_text.text = self.descript
+    self.item_description_text.text = self.item_description
     self.list_price_box.text = list_price
     self.weight.text = weight
     self.discount_box.text = discount
@@ -84,23 +84,23 @@ class Form1(Form1Template):
     self.fin_cost_box.text = self.fin_cost
     self.total_cost_box.text = self.total_cost
     self.markup_box.text = self.markup
-    self.unit_price_box.text = self.selling
-    self.total_box.text = self.selling
-    self.total = float(self.selling.lstrip('$ ').rstrip(' ').replace(",", ""))
+    self.unit_price_box.text = self.unit_price
+    self.extended_price_box.text = self.unit_price
+    self.exntended_price = float(self.unit_price.lstrip('$ ').rstrip(' ').replace(",", ""))
 
   def set_selling(self):
     """Float variables to total up costs"""
     total_cost_float = float(self.cost_after.lstrip('$ ').rstrip(' ').replace(",", ""))
-    selling_float = float(self.cost_after.lstrip('$ ').rstrip(' ').replace(",", ""))
+    unit_price_float = float(self.cost_after.lstrip('$ ').rstrip(' ').replace(",", ""))
 
     """If freight is checked add it to the totals"""
     if self.freight_check.checked:
-      selling_float += float(self.freight.lstrip('$ ').rstrip(' ').replace(",", ""))
+      unit_price_float += float(self.freight.lstrip('$ ').rstrip(' ').replace(",", ""))
       total_cost_float += float(self.freight.lstrip('$ ').rstrip(' ').replace(",", ""))
 
     """If fin cost is checked add it to the totals"""
     if self.fin_cost_check.checked:
-      selling_float += float(self.fin_cost.lstrip('$ ').rstrip(' ').replace(",", ""))
+      unit_price_float += float(self.fin_cost.lstrip('$ ').rstrip(' ').replace(",", ""))
       total_cost_float += float(self.fin_cost.lstrip('$ ').rstrip(' ').replace(",", ""))
 
     """Setting the total cost to display"""
@@ -117,18 +117,18 @@ class Form1(Form1Template):
 
     """If markup is enabled add to total"""
     if self.markup_check.checked:
-      selling_float += markup_float
+      unit_price_float += markup_float
 
     """Setting the final price to display"""
-    self.selling = "$ " + '{:,.2f}'.format(selling_float)
-    self.unit_price_box.text = self.selling
+    self.unit_price = "$ " + '{:,.2f}'.format(unit_price_float)
+    self.unit_price_box.text = self.unit_price
 
     """Setting total price to display"""
-    self.total_float = selling_float*int(self.item_amount.text)
+    self.exntended_price_float = unit_price_float*int(self.item_amount.text)
     
     
-    self.total = "$ " + '{:,.2f}'.format(self.total_float)
-    self.total_box.text = self.total
+    self.exntended_price = "$ " + '{:,.2f}'.format(self.exntended_price_float)
+    self.extended_price_box.text = self.exntended_price
     pass
       
   def freight_check_change(self, **event_args):
@@ -181,16 +181,16 @@ class Form1(Form1Template):
     self.set_selling()
     
     try:
-      self.repeating_panel_1.items.append({'item_num': self.item_number, 'desc': self.descript, 'cost': self.selling, 'num': self.item_amount.text, 'extended_price_spot': self.total})
+      self.repeating_panel_1.items.append({'item_number_spot': self.item_number, 'item_description_spot': self.item_description, 'unit_price_spot': self.unit_price, 'num': self.item_amount.text, 'extended_price_spot': self.exntended_price})
     
     except AttributeError:
       self.repeating_panel_1.items = [
-        {'item_num': self.item_number, 'desc': self.descript, 'cost': self.selling, 'num': self.item_amount.text, 'extended_price_spot': self.total}
+        {'item_number_spot': self.item_number, 'item_description_spot': self.item_description, 'unit_price_spot': self.unit_price, 'quantity_spot': self.item_amount.text, 'extended_price_spot': self.exntended_price}
       ]
     
     self.repeating_panel_1.items = self.repeating_panel_1.items
-    self.total_price += self.total_float
-    self.net_cost_box.text =  ' $ ' + '{:,.2f}'.format(self.total_price) + "           "
+    self.net_amount_float += self.exntended_price_float
+    self.net_amount_box.text =  ' $ ' + '{:,.2f}'.format(self.net_amount_float) + "           "
     
     pass
 
@@ -198,7 +198,7 @@ class Form1(Form1Template):
     """This method is called when the button is clicked"""  
     self.form_panel.visible = False
     for x in range(12):
-      self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 'extended_price_spot': ''})
+      self.repeating_panel_1.items.append({'item_number_spot': '', 'item_description_spot': '', 'unit_price_spot': '', 'quantity_spot': '', 'extended_price_spot': ''})
     self.repeating_panel_1.items = self.repeating_panel_1.items
     self.call_js('printPage', self.data_grid_2)
     self.form_panel.visible = True
@@ -214,10 +214,10 @@ class Form1(Form1Template):
   def clear_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.repeating_panel_1.items = []
-    self.total_price = 0
-    self.total_price = 0
-    self.total_price = 0
-    self.net_cost_box.text = ' $ ' + '{:,.2f}'.format(self.total_price)
+    self.net_amount_float = 0
+    self.net_amount_float = 0
+    self.net_amount_float = 0
+    self.net_amount_box.text = ' $ ' + '{:,.2f}'.format(self.net_amount_float)
     pass
 
   def search_list(self):
@@ -248,8 +248,8 @@ class Form1(Form1Template):
 
   def remove_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.total_price -= float(self.repeating_panel_1.items[-1]['extended_price_spot'].lstrip('$ ').rstrip(' ').replace(",", ""))
-    self.net_cost_box.text =  ' $ ' + '{:,.2f}'.format(self.total_price)
+    self.net_amount_float -= float(self.repeating_panel_1.items[-1]['extended_price_spot'].lstrip('$ ').rstrip(' ').replace(",", ""))
+    self.net_amount_box.text =  ' $ ' + '{:,.2f}'.format(self.net_amount_float)
     self.repeating_panel_1.items.pop()
     self.repeating_panel_1.items = self.repeating_panel_1.items
     pass
@@ -257,14 +257,14 @@ class Form1(Form1Template):
   def add_total_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     try:
-      self.repeating_panel_1.items.append({'item_num': 'Cont.', 'desc': 'Previous Total', 'cost': '', 'num': '', 'extended_price_spot': '$ ' + '{:,.2f}'.format(float(self.previous_total.text))})
+      self.repeating_panel_1.items.append({'item_number_spot': 'Cont.', 'item_description_spot': 'Previous Total', 'unit_price_spot': '', 'quantity_spot': '', 'extended_price_spot': '$ ' + '{:,.2f}'.format(float(self.previous_net_amount.text))})
     
     except AttributeError:
       self.repeating_panel_1.items = [
-        {'item_num': 'Cont.', 'desc': 'Previous Total', 'cost': '', 'num': '', 'extended_price_spot': '$ ' + '{:,.2f}'.format(float(self.previous_total.text.replace(",", "")))}
+        {'item_number_spot': 'Cont.', 'item_description_spot': 'Previous Total', 'unit_price_spot': '', 'quantity_spot': '', 'extended_price_spot': '$ ' + '{:,.2f}'.format(float(self.previous_net_amount.text.replace(",", "")))}
       ]
 
     self.repeating_panel_1.items = self.repeating_panel_1.items
-    self.total_price += float(self.previous_total.text)
-    self.net_cost_box.text =  ' $ ' + '{:,.2f}'.format(self.total_price)
+    self.net_amount_float += float(self.previous_net_amount.text)
+    self.net_amount_box.text =  ' $ ' + '{:,.2f}'.format(self.net_amount_float)
     pass

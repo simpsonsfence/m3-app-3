@@ -151,7 +151,7 @@ components:
         visible: true, text: '', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
-      name: descript_text
+      name: item_description_text
       layout_properties: {grid_position: 'OKYQIN,AFPPEX'}
       event_bindings: {}
       data_bindings: []
@@ -363,7 +363,7 @@ components:
           underline: false, icon: ''}
         type: Label
         layout_properties: {grid_position: 'ZYNZAC,WTFIBR'}
-      - name: total_box
+      - name: extended_price_box
         properties: {}
         type: Label
         layout_properties: {grid_position: 'ZYNZAC,VPAJGD'}
@@ -392,7 +392,7 @@ components:
       type: Button
       layout_properties: {grid_position: 'SOFJVS,PEUTTR'}
       event_bindings: {click: add_total_button_click}
-    - name: previous_total
+    - name: previous_net_amount
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'SOFJVS,NWRSJK'}
@@ -441,11 +441,13 @@ components:
         - name: data_grid_1
           properties:
             columns:
-            - {id: JKSDUP, title: Item Number, data_key: item_num, width: 107, expand: false}
-            - {id: VJQQOR, title: Description, data_key: desc, width: 252, expand: false}
+            - {id: JKSDUP, title: Item Number, data_key: item_number_spot, width: 107,
+              expand: false}
+            - {id: VJQQOR, title: Description, data_key: description_spot, width: 252,
+              expand: false}
             - {id: OJLQEN, title: Unit Price, data_key: unit_price_spot, width: 106,
               expand: false}
-            - {id: RXRYNW, data_key: num, title: Qty., width: 80, expand: false}
+            - {id: RXRYNW, data_key: quantity_spot, title: Qty., width: 80, expand: false}
             - {id: RNVHPW, data_key: extended_price_spot, title: Extended Price}
             show_page_controls: false
             spacing_above: none
@@ -515,7 +517,7 @@ components:
       type: LinearPanel
       layout_properties: {grid_position: 'TYGGUV,UDERVL'}
       components:
-      - name: net_cost_box
+      - name: net_amount_box
         properties: {align: left, spacing_above: none, spacing_below: none, role: null}
         type: Label
         layout_properties: {}
