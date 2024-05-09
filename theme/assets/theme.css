@@ -16,8 +16,8 @@
 }
 
 .anvil-data-grid>.anvil-roles-no-border>.anvil-data-row-panel>.data-row-col {
-   border-right: 0.5px solid;
-   border-left: none !important;
+  border-right: 0.5px solid;
+  border-left: none !important;
 }
 
 
@@ -160,9 +160,13 @@ body {
   }
   .anvil-role-border-top {
   border-top: 0.5px solid !important;
-  overflow: visible !important;
+  overflow: hidden !important;
   margin-bottom: -14px !important;
   padding-bottom: 0px !important;
+  }
+  .anvil-role-border-bottom {
+  border-bottom: 0.5px solid !important;
+  overflow: hidden !important;
   }
 }
 
@@ -233,7 +237,7 @@ color: %color:On Primary Container%;
 
 .anvil-role-border-top {
   border-top: 0.5px solid !important;
-  overflow: visible !important;
+  overflow: hidden !important;
   padding-bottom: 0px !important;
 }
 

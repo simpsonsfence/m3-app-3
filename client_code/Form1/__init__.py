@@ -22,7 +22,11 @@ class Form1(Form1Template):
   markup = ""
   selling = ""
   total = ""
+  tax = ""
+  final = ""
   total_float = 0
+  tax_float = 0
+  final_float = 0
   markup_percentage_type = 0
   total_price = 0
   full_list = []
@@ -121,8 +125,17 @@ class Form1(Form1Template):
 
     """Setting total price to display"""
     self.total_float = selling_float*int(self.item_amount.text)
+    self.tax_float = self.total_float*0.13
+    self.final_float = self.total_float + self.tax_float
+    
     self.total = "$ " + '{:,.2f}'.format(self.total_float)
     self.total_box.text = self.total
+
+    self.tax = "$ " + '{:,.2f}'.format(self.tax_float)
+    self.hst_tax.text = self.tax
+
+    self.final = "$ " + '{:,.2f}'.format(self.final_float)
+    self.end_cost.text = self.final
     pass
       
   def freight_check_change(self, **event_args):
@@ -192,21 +205,15 @@ class Form1(Form1Template):
     """This method is called when the button is clicked"""  
     self.form_panel.visible = False
     self.totaled_cost.visible = False
-    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': 'TOTAL DUE:', 'num': '', 't_cost': '$ ' + '{:,.2f}'.format(self.total_price)})
-    self.repeating_panel_1.items = self.repeating_panel_1.items
-    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
-    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
-    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
-    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
-    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
-    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
-    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
+    for x in range(12):
+      self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
     self.repeating_panel_1.items = self.repeating_panel_1.items
     self.call_js('printPage', self.data_grid_2)
-    self.repeating_panel_1.items.pop()
-    self.repeating_panel_1.items = self.repeating_panel_1.items
     self.form_panel.visible = True
     self.totaled_cost.visible = True
+    for x in range(12):
+      self.repeating_panel_1.items.pop()
+    self.repeating_panel_1.items = self.repeating_panel_1.items
     self.invoice_number_item['Invoice Number'] = '' + str(int(self.invoice_number_item['Invoice Number'])+1)
     self.part_look_up.items = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
     self.invoice_number_item = self.part_look_up.selected_value
@@ -217,7 +224,9 @@ class Form1(Form1Template):
     """This method is called when the button is clicked"""
     self.repeating_panel_1.items = []
     self.total_price = 0
-    self.totaled_cost.text = 'Total: $ ' + '{:,.2f}'.format(self.total_price)
+    self.total_price = 0
+    self.total_price = 0
+    self.totaled_cost.text = '$ ' + '{:,.2f}'.format(self.total_price)
     pass
 
   def search_list(self):
@@ -261,7 +270,7 @@ class Form1(Form1Template):
     
     except AttributeError:
       self.repeating_panel_1.items = [
-        {'item_num': 'Cont.', 'desc': 'Previous Total', 'cost': '', 'num': '', 't_cost': '$ ' + '{:,.2f}'.format(float(self.previous_total.text))}
+        {'item_num': 'Cont.', 'desc': 'Previous Total', 'cost': '', 'num': '', 't_cost': '$ ' + '{:,.2f}'.format(float(self.previous_total.text.replace(",", "")))}
       ]
 
     self.repeating_panel_1.items = self.repeating_panel_1.items

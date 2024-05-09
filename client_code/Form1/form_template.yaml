@@ -6,7 +6,7 @@ container:
   event_bindings: {}
 components:
 - name: content_panel
-  properties: {col_widths: '{"RESQVG":35,"CKHAZT":30}', spacing_above: none, spacing_below: none}
+  properties: {col_widths: '{"RESQVG":40,"CKHAZT":25}', spacing_above: none, spacing_below: none}
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
@@ -95,7 +95,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'YDDPMJ,UNGJNU'}
   - type: ColumnPanel
-    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    properties: {role: border-bottom, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"BJVXDZ":20,"LSXARU":45,"QWVSOI":10,"DPDBBC":32,"OEWVIA":15,"AFPPEX":45,"PLJJWC":15,"PEUTTR":20,"NWRSJK":30}',
       spacing_below: none, background: ''}
     name: form_panel
@@ -396,72 +396,75 @@ components:
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'SOFJVS,NWRSJK'}
-  - name: data_grid_2
-    properties:
-      columns:
-      - {id: JKSDUP, title: P.O. NUMBER, data_key: column_1}
-      - {id: VJQQOR, title: SALESPERSON, data_key: column_2}
-      - {id: OJLQEN, title: ORDER DATE, data_key: column_3}
-      - {id: LFHXAA, data_key: column_4, title: REQ. DATE}
-      - {id: DBWHLU, data_key: column_5, title: ORDER NUMBER}
-      role: [border-top]
-      rows_per_page: 50
-      show_page_controls: false
-      spacing_above: none
-      spacing_below: none
-      auto_header: true
-    type: DataGrid
+  - name: column_panel_10
+    properties: {border: 1px solid, spacing_above: none, spacing_below: none, role: border-bottom}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'OURBHJ,TEOCKD'}
     components:
-    - name: repeating_panel_2
-      properties: {item_template: Form1.RowTemplate2, role: border, spacing_above: none,
-        spacing_below: none}
-      type: RepeatingPanel
-    - name: data_grid_3
+    - name: data_grid_2
       properties:
         columns:
-        - {id: JKSDUP, title: F.O.B., data_key: column_1}
-        - {id: VJQQOR, title: SHIP VIA, data_key: column_2}
-        - {id: OJLQEN, title: TERMS, data_key: column_3}
-        role: border-top
+        - {id: JKSDUP, title: P.O. NUMBER, data_key: column_1}
+        - {id: VJQQOR, title: SALESPERSON, data_key: column_2}
+        - {id: OJLQEN, title: ORDER DATE, data_key: column_3}
+        - {id: LFHXAA, data_key: column_4, title: REQ. DATE}
+        - {id: DBWHLU, data_key: column_5, title: ORDER NUMBER}
+        role: [border-top, border-bottom]
+        rows_per_page: 50
+        show_page_controls: false
         spacing_above: none
         spacing_below: none
-        show_page_controls: false
+        auto_header: true
       type: DataGrid
       components:
-      - name: repeating_panel_3
-        properties: {item_template: Form1.RowTemplate3, role: border, spacing_above: none,
+      - name: repeating_panel_2
+        properties: {item_template: Form1.RowTemplate2, role: border, spacing_above: none,
           spacing_below: none}
         type: RepeatingPanel
-        layout_properties: {}
-      - name: data_grid_1
+      - name: data_grid_3
         properties:
           columns:
-          - {id: JKSDUP, title: Item Number, data_key: item_num, width: 107, expand: false}
-          - {id: VJQQOR, title: Description, data_key: desc, width: 252, expand: false}
-          - {id: OJLQEN, title: Unit Price, data_key: cost, width: 106, expand: false}
-          - {id: RXRYNW, data_key: num, title: Qty., width: 80, expand: false}
-          - {id: RNVHPW, data_key: t_cost, title: Extended Price}
-          show_page_controls: false
+          - {id: JKSDUP, title: F.O.B., data_key: column_1}
+          - {id: VJQQOR, title: SHIP VIA, data_key: column_2}
+          - {id: OJLQEN, title: TERMS, data_key: column_3}
+          role: border-top
           spacing_above: none
           spacing_below: none
-          role: border-top
-          auto_header: true
-          border: ''
+          show_page_controls: false
         type: DataGrid
         components:
-        - name: repeating_panel_1
-          properties:
-            item_template: Form1.RowTemplate1
-            spacing_above: none
-            spacing_below: none
-            role: [border, set-height]
+        - name: repeating_panel_3
+          properties: {item_template: Form1.RowTemplate3, role: border, spacing_above: none,
+            spacing_below: none}
           type: RepeatingPanel
           layout_properties: {}
+        - name: data_grid_1
+          properties:
+            columns:
+            - {id: JKSDUP, title: Item Number, data_key: item_num, width: 107, expand: false}
+            - {id: VJQQOR, title: Description, data_key: desc, width: 252, expand: false}
+            - {id: OJLQEN, title: Unit Price, data_key: cost, width: 106, expand: false}
+            - {id: RXRYNW, data_key: num, title: Qty., width: 80, expand: false}
+            - {id: RNVHPW, data_key: t_cost, title: Extended Price}
+            show_page_controls: false
+            spacing_above: none
+            spacing_below: none
+            role: border-top
+            auto_header: true
+            border: ''
+          type: DataGrid
+          components:
+          - name: repeating_panel_1
+            properties: {item_template: Form1.RowTemplate1, spacing_above: none, spacing_below: none,
+              role: set-height}
+            type: RepeatingPanel
+            layout_properties: {}
+            data_bindings: []
+          layout_properties: {}
           data_bindings: []
-        data_bindings: []
-    layout_properties: {grid_position: 'XXEJGE,AYMFWT'}
+      layout_properties: {grid_position: 'URUWKB,XDRGZG'}
   - name: column_panel_11
-    properties: {col_widths: '{"JXEPKJ":15,"JARRPN":25,"FFXWHX":20}', spacing_above: large}
+    properties: {col_widths: '{"JXEPKJ":15,"JARRPN":30,"FFXWHX":15}', spacing_above: large}
     type: ColumnPanel
     layout_properties: {grid_position: 'AZDAPB,RESQVG'}
     components:
@@ -492,16 +495,18 @@ components:
     layout_properties: {grid_position: 'AZDAPB,CKHAZT'}
     components:
     - name: label_16
-      properties: {spacing_above: none, spacing_below: none, bold: true, text: NET AMOUNT}
+      properties: {spacing_above: none, spacing_below: none, bold: true, text: NET AMOUNT,
+        align: right}
       type: Label
       layout_properties: {grid_position: 'TYGGUV,VODHSF HBQSHM,FSDBGC'}
     - name: label_17
-      properties: {spacing_above: none, spacing_below: none, text: FREIGHT H.S.T.,
-        bold: true}
+      properties: {spacing_above: none, spacing_below: none, text: H.S.T., bold: true,
+        align: right}
       type: Label
       layout_properties: {grid_position: 'TYGGUV,VODHSF ZLAYQO,DWXHER'}
     - name: label_18
-      properties: {spacing_above: none, spacing_below: none, text: TOTAL DUE, bold: true}
+      properties: {spacing_above: none, spacing_below: none, text: TOTAL DUE, bold: true,
+        align: right}
       type: Label
       layout_properties: {grid_position: 'TYGGUV,VODHSF GKKWIV,UWZKTD'}
     - name: linear_panel_1
@@ -512,7 +517,7 @@ components:
       - name: totaled_cost
         properties: {align: right, spacing_above: none, spacing_below: none, role: null}
         type: Label
-      - name: freight_hst
+      - name: hst_tax
         properties: {align: right, spacing_above: none, spacing_below: none, role: null}
         type: Label
       - name: end_cost
