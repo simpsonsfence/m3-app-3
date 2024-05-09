@@ -220,7 +220,7 @@ components:
         layout_properties: {grid_position: 'YJBVCO,SALJWU XUNZLP,DHGKLF'}
       - type: Label
         properties: {}
-        name: selling_box
+        name: unit_price_box
         layout_properties: {grid_position: 'YJBVCO,SALJWU YXJNFR,BLCBLN'}
     - name: column_panel_2
       properties: {}
@@ -514,14 +514,16 @@ components:
       type: LinearPanel
       layout_properties: {grid_position: 'TYGGUV,UDERVL'}
       components:
-      - name: totaled_cost
-        properties: {align: right, spacing_above: none, spacing_below: none, role: null}
+      - name: net_cost_box
+        properties: {align: left, spacing_above: none, spacing_below: none, role: null}
         type: Label
+        layout_properties: {}
       - name: hst_tax
-        properties: {align: right, spacing_above: none, spacing_below: none, role: null}
+        properties: {align: left, spacing_above: none, spacing_below: none, role: null}
         type: Label
+        layout_properties: {}
       - name: end_cost
-        properties: {align: right, spacing_above: none, spacing_below: none, role: border,
+        properties: {align: left, spacing_above: none, spacing_below: none, role: border,
           text: ''}
         type: Label
         layout_properties: {}
