@@ -194,6 +194,14 @@ class Form1(Form1Template):
     self.totaled_cost.visible = False
     self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': 'TOTAL DUE:', 'num': '', 't_cost': '$ ' + '{:,.2f}'.format(self.total_price)})
     self.repeating_panel_1.items = self.repeating_panel_1.items
+    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
+    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
+    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
+    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
+    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
+    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
+    self.repeating_panel_1.items.append({'item_num': '', 'desc': '', 'cost': '', 'num': '', 't_cost': ''})
+    self.repeating_panel_1.items = self.repeating_panel_1.items
     self.call_js('printPage', self.data_grid_2)
     self.repeating_panel_1.items.pop()
     self.repeating_panel_1.items = self.repeating_panel_1.items

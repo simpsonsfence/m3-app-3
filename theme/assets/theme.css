@@ -158,6 +158,12 @@ body {
   body {
     background-color: white;
   }
+  .anvil-role-border-top {
+  border-top: 0.5px solid !important;
+  overflow: visible !important;
+  margin-bottom: -14px !important;
+  padding-bottom: 0px !important;
+  }
 }
 
 a, a:focus {
@@ -228,10 +234,12 @@ color: %color:On Primary Container%;
 .anvil-role-border-top {
   border-top: 0.5px solid !important;
   overflow: visible !important;
-  margin-bottom: -14px !important;
   padding-bottom: 0px !important;
 }
 
+.anvil-role-set-height {
+  height: 32vh;
+}
 
 .anvil-data-row-panel>.data-row-col .anvil-role-no-border {
   border: 0 !important;

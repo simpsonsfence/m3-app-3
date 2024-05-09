@@ -58,6 +58,7 @@ roles:
 - {name: no-border}
 - {name: remove-top-space}
 - {name: no-scroll}
+- {name: set-height}
 color_scheme:
   preset_groups:
   - name: Colour Scheme

@@ -450,8 +450,11 @@ components:
         type: DataGrid
         components:
         - name: repeating_panel_1
-          properties: {item_template: Form1.RowTemplate1, spacing_above: none, spacing_below: none,
-            role: border}
+          properties:
+            item_template: Form1.RowTemplate1
+            spacing_above: none
+            spacing_below: none
+            role: [border, set-height]
           type: RepeatingPanel
           layout_properties: {}
           data_bindings: []
