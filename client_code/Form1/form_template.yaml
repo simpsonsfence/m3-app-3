@@ -443,9 +443,10 @@ components:
             columns:
             - {id: JKSDUP, title: Item Number, data_key: item_num, width: 107, expand: false}
             - {id: VJQQOR, title: Description, data_key: desc, width: 252, expand: false}
-            - {id: OJLQEN, title: Unit Price, data_key: cost, width: 106, expand: false}
+            - {id: OJLQEN, title: Unit Price, data_key: unit_price_spot, width: 106,
+              expand: false}
             - {id: RXRYNW, data_key: num, title: Qty., width: 80, expand: false}
-            - {id: RNVHPW, data_key: t_cost, title: Extended Price}
+            - {id: RNVHPW, data_key: extended_price_spot, title: Extended Price}
             show_page_controls: false
             spacing_above: none
             spacing_below: none
@@ -518,11 +519,11 @@ components:
         properties: {align: left, spacing_above: none, spacing_below: none, role: null}
         type: Label
         layout_properties: {}
-      - name: hst_tax
+      - name: hst_box
         properties: {align: left, spacing_above: none, spacing_below: none, role: null}
         type: Label
         layout_properties: {}
-      - name: end_cost
+      - name: total_due_box
         properties: {align: left, spacing_above: none, spacing_below: none, role: border,
           text: ''}
         type: Label
