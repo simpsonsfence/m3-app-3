@@ -196,11 +196,11 @@ class Form1(Form1Template):
       self.repeating_panel_1.items.append({})
     self.repeating_panel_1.items = self.repeating_panel_1.items
     self.net_amount_float += self.extended_price_float
-    self.net_amount_box.text =  ' $ ' + '{:,.2f}'.format(self.net_amount_float)
+    self.net_amount_box.text =  '    $ ' + '{:,.2f}'.format(self.net_amount_float)
     self.hst_float = self.net_amount_float*0.13
-    self.hst_box.text =  ' $ ' + '{:,.2f}'.format(self.hst_float)
+    self.hst_box.text =  '    $ ' + '{:,.2f}'.format(self.hst_float)
     self.total_due_float = self.net_amount_float + self.hst_float
-    self.total_due_box.text =  ' $ ' + '{:,.2f}'.format(self.total_due_float)
+    self.total_due_box.text =  '    $ ' + '{:,.2f}'.format(self.total_due_float)
     
     pass
 
@@ -221,11 +221,11 @@ class Form1(Form1Template):
     for x in range(11):
       self.repeating_panel_1.items.append({})
     self.net_amount_float = 0
-    self.net_amount_box.text = ' $ ' + '{:,.2f}'.format(self.net_amount_float)
+    self.net_amount_box.text = '    $ ' + '{:,.2f}'.format(self.net_amount_float)
     self.hst_float = 0
-    self.hst_box.text = ' $ ' + '{:,.2f}'.format(self.hst_float)
+    self.hst_box.text = '    $ ' + '{:,.2f}'.format(self.hst_float)
     self.total_due_float = 0
-    self.total_due_box.text = ' $ ' + '{:,.2f}'.format(self.total_due_float)
+    self.total_due_box.text = '    $ ' + '{:,.2f}'.format(self.total_due_float)
     pass
 
   def search_list(self):
@@ -259,11 +259,11 @@ class Form1(Form1Template):
     for x in range(12):
       self.repeating_panel_1.items.pop()
     self.net_amount_float -= float(self.repeating_panel_1.items[-1]['extended_price_spot'].lstrip('$ ').rstrip(' ').replace(",", ""))
-    self.net_amount_box.text =  ' $ ' + '{:,.2f}'.format(self.net_amount_float)
+    self.net_amount_box.text =  '    $ ' + '{:,.2f}'.format(self.net_amount_float)
     self.hst_float = self.net_amount_float*0.13
-    self.hst_box.text =  ' $ ' + '{:,.2f}'.format(self.hst_float)
+    self.hst_box.text =  '    $ ' + '{:,.2f}'.format(self.hst_float)
     self.total_due_float = self.net_amount_float + self.hst_float
-    self.total_due_box.text =  ' $ ' + '{:,.2f}'.format(self.total_due_float)
+    self.total_due_box.text =  '    $ ' + '{:,.2f}'.format(self.total_due_float)
     self.repeating_panel_1.items.pop()
     try:
       for x in range(12):
@@ -287,11 +287,11 @@ class Form1(Form1Template):
 
     self.repeating_panel_1.items = self.repeating_panel_1.items
     self.net_amount_float += float(self.previous_net_amount.text)
-    self.net_amount_box.text =  ' $ ' + '{:,.2f}'.format(self.net_amount_float)
+    self.net_amount_box.text =  '    $ ' + '{:,.2f}'.format(self.net_amount_float)
     self.hst_float = self.net_amount_float*0.13
-    self.hst_box.text =  ' $ ' + '{:,.2f}'.format(self.hst_float)
+    self.hst_box.text =  '    $ ' + '{:,.2f}'.format(self.hst_float)
     self.total_due_float = self.net_amount_float + self.hst_float
-    self.total_due_box.text =  ' $ ' + '{:,.2f}'.format(self.total_due_float)
+    self.total_due_box.text =  '    $ ' + '{:,.2f}'.format(self.total_due_float)
     pass
 
   def set_inoice_number_button_click(self, **event_args):
