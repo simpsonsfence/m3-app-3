@@ -296,7 +296,7 @@ class Form1(Form1Template):
 
   def set_inoice_number_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.invoice_number_item['Invoice Number'] = '' + str(int(self.invoice_number_item['Invoice Number'])+1)
+    self.invoice_number_item['Invoice Number'] = '' + str(int(self.new_invoice_number.text))
     self.part_look_up.items = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
     self.invoice_number_item = self.part_look_up.selected_value
     self.rich_text_2.content = 'DATE ' + date.today().strftime("%B %d, %Y") + '\n' + 'NUMBER ' + self.invoice_number_item['Invoice Number']
