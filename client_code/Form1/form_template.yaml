@@ -12,7 +12,7 @@ components:
   components:
   - type: ColumnPanel
     properties: {role: border-bottom, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"BJVXDZ":20,"LSXARU":45,"QWVSOI":10,"DPDBBC":32,"OEWVIA":15,"AFPPEX":45,"PLJJWC":15,"PEUTTR":20,"NWRSJK":30}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"BJVXDZ":20,"LSXARU":45,"QWVSOI":10,"DPDBBC":32,"OEWVIA":15,"AFPPEX":45,"PLJJWC":15,"PEUTTR":15,"NWRSJK":20,"YURRIM":20,"XASDJO":25}',
       spacing_below: none, background: ''}
     name: form_panel
     layout_properties: {grid_position: 'GJURRN,DZBALF'}
@@ -312,6 +312,15 @@ components:
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'SOFJVS,NWRSJK'}
+    - name: set_inoice_number_button
+      properties: {text: Set Invoice Number, role: outlined-button}
+      type: Button
+      layout_properties: {grid_position: 'SOFJVS,YURRIM'}
+      event_bindings: {click: set_inoice_number_button_click}
+    - name: new_invoice_number
+      properties: {role: outlined}
+      type: TextBox
+      layout_properties: {grid_position: 'SOFJVS,XASDJO'}
   - name: column_panel_4
     properties: {col_widths: '{"SZLGXD":20,"EVRCWJ":25,"UERZRI":15}'}
     type: ColumnPanel
@@ -448,15 +457,15 @@ components:
         - name: data_grid_1
           properties:
             columns:
-            - {id: JKSDUP, title: Item Num., data_key: item_number_spot, width: 81,
+            - {id: JKSDUP, title: Item Num., data_key: item_number_spot, width: 75,
               expand: false}
-            - {id: VJQQOR, title: Description, data_key: item_description_spot, width: 146,
+            - {id: VJQQOR, title: Description, data_key: item_description_spot, width: 176,
               expand: false}
             - {id: OJLQEN, title: UOM, data_key: uom_spot, width: 65, expand: false}
-            - {id: RXRYNW, data_key: quantity_spot, title: Qty. Req., width: 69, expand: false}
-            - {id: RNVHPW, data_key: shipped_spot, title: Shipped, width: 65, expand: false}
+            - {id: RXRYNW, data_key: quantity_spot, title: Qty. Req., width: 68, expand: false}
+            - {id: RNVHPW, data_key: shipped_spot, title: Shipped, width: 67, expand: false}
             - {id: PQSMVD, data_key: bo_spot, title: B.O., width: 64, expand: false}
-            - {id: ATLXSR, data_key: unit_price_spot, title: Unit Price, width: 98,
+            - {id: ATLXSR, data_key: unit_price_spot, title: Unit Price, width: 78,
               expand: false}
             - {id: QTDMMI, data_key: extended_price_spot, title: Extended Price}
             show_page_controls: false
