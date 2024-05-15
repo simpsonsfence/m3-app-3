@@ -120,10 +120,11 @@ class Form1(Form1Template):
       total_cost_float += float(self.fin_cost.lstrip('$ ').rstrip(' ').replace(",", ""))
 
     """Setting the total cost to display"""
+    """:, means put , in tousands .2f means show two decimal places"""
     self.total_cost = "$ " + '{:,.2f}'.format(total_cost_float)
     self.total_cost_box.text = self.total_cost
 
-    """Calculating the markup based on the products markup percentage"""
+    """Calculating the markup based on the products markup percentage devide"""
     markup_float = total_cost_float * float(self.markup_percentage.text)/100
 
 
