@@ -145,49 +145,8 @@ class Form1(Form1Template):
     self.extended_price = "$ " + '{:,.2f}'.format(self.extended_price_float)
     self.extended_price_box.text = self.extended_price
     pass
-      
-  def freight_check_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    """Run the function to recalculate the selling price"""
-    self.set_selling()
-    pass
-
-  def fin_cost_check_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    self.set_selling()
-
-  def markup_check_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    self.set_selling()
-    pass
-
-  def markup_percentage_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
     
-  def item_amount_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
-
-  def markup_percentage_change(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
-    
-  def item_amount_change(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
-
-  def markup_percentage_lost_focus(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
-    
-  def item_amount_lost_focus(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
+  def call_set_selling(self, **event_args):
     self.set_selling()
     pass
   
@@ -278,18 +237,7 @@ class Form1(Form1Template):
     
     pass
   
-  def search_box_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.search_list()
-    pass
-
-  def search_box_change(self, **event_args):
-    """This method is called when the text in this text box is edited"""
-    self.search_list()
-    pass
-
-  def search_box_lost_focus(self, **event_args):
-    """This method is called when the TextBox loses focus"""
+  def call_search_list(self, **event_args):
     self.search_list()
     pass
 

@@ -28,8 +28,8 @@ components:
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'QNFDUR,PLJJWC'}
-      event_bindings: {pressed_enter: search_box_pressed_enter, change: search_box_change,
-        lost_focus: search_box_lost_focus}
+      event_bindings: {pressed_enter: call_search_list, change: call_search_list,
+        lost_focus: call_search_list}
     - type: DropDown
       properties:
         role: null
@@ -172,7 +172,7 @@ components:
               italic: false, background: '', bold: false, checked: true, underline: false}
             name: freight_check
             layout_properties: {grid_position: 'BZKDQC,CMGTSI'}
-            event_bindings: {change: freight_check_change}
+            event_bindings: {change: call_set_selling}
           - type: Label
             properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
               visible: true, text: Freight, font_size: null, font: '', spacing_above: small,
@@ -191,7 +191,7 @@ components:
             bold: false, checked: true, underline: false}
           name: fin_cost_check
           layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
-          event_bindings: {change: fin_cost_check_change}
+          event_bindings: {change: call_set_selling}
         - type: Label
           properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
             visible: true, text: Finance Cost, font_size: null, font: '', spacing_above: small,
@@ -215,7 +215,7 @@ components:
             bold: false, checked: true, underline: false}
           name: markup_check
           layout_properties: {grid_position: 'HHWPVS,TIMOIY'}
-          event_bindings: {change: markup_check_change}
+          event_bindings: {change: call_set_selling}
         - type: Label
           properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
             visible: true, text: Mark Up, font_size: null, font: '', spacing_above: small,
@@ -259,14 +259,14 @@ components:
           properties: {role: outlined, spacing_above: none, spacing_below: none}
           type: TextBox
           layout_properties: {grid_position: 'GVEGHU,JKBXQS'}
-          event_bindings: {pressed_enter: markup_percentage_pressed_enter, change: markup_percentage_change,
-            lost_focus: markup_percentage_lost_focus}
+          event_bindings: {pressed_enter: call_set_selling, change: call_set_selling,
+            lost_focus: call_set_selling}
       - name: item_amount
         properties: {role: outlined, spacing_above: none, spacing_below: none}
         type: TextBox
         layout_properties: {grid_position: 'FCQVEJ,OAEBPE SZOMCF,PMOWJZ'}
-        event_bindings: {pressed_enter: markup_percentage_pressed_enter, lost_focus: item_amount_lost_focus,
-          change: item_amount_change}
+        event_bindings: {pressed_enter: call_set_selling, lost_focus: call_set_selling,
+          change: call_set_selling}
     - name: column_panel_5
       properties: {col_widths: '{"WTFIBR":15,"VPAJGD":45}'}
       type: ColumnPanel
