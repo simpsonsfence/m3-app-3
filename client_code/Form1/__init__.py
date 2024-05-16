@@ -36,6 +36,9 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
+    """Tool tip to make the search stand out"""
+    self.search_box.tooltip = "Enter the item/part number you want to look up."
     
     """Set the variable to look up items in the spreadsheet"""
     self.full_list = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
@@ -63,6 +66,7 @@ class Form1(Form1Template):
     self.freight_check.checked = True
     self.fin_cost_check.checked = True
     self.markup_check.checked = True
+    self.bulk_discount_check.checked = True
 
     """Getting the product info from the spreadsheet"""
     part_selected = self.part_look_up.selected_value
