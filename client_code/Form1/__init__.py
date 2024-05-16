@@ -20,6 +20,7 @@ class Form1(Form1Template):
   fin_cost = ""
   total_cost = ""
   markup = ""
+  bulk_discount = ""
   unit_price = ""
   extended_price = ""
   net_amount = ""
@@ -76,11 +77,16 @@ class Form1(Form1Template):
     self.fin_cost = part_selected['Fin Cost']
     self.total_cost = part_selected['Total Cost']
     self.markup = part_selected['Markup']
-    self.item_amount.text = 1
     self.unit_price = part_selected['SELLING PRICE']
 
     """Get markup type from the spreadsheet"""
     self.markup_percentage_type = int(part_selected['Markup Type'])
+
+    """Default one item"""
+    self.item_amount.text = 1
+
+    """Default no discount"""
+    self.bulk_discount_percentage.text = 0
     
     """Set markup percentage based on the type of markup"""
     if self.markup_percentage_type == 1:
@@ -127,7 +133,6 @@ class Form1(Form1Template):
     """Calculating the markup based on the products markup percentage devide"""
     markup_float = total_cost_float * float(self.markup_percentage.text)/100
 
-
     """Setting the markup value to display"""
     self.markup = "$ " + '{:,.2f}'.format(markup_float)
     self.markup_box.text = self.markup
@@ -136,6 +141,17 @@ class Form1(Form1Template):
     if self.markup_check.checked:
       unit_price_float += markup_float
 
+    """Calculating the bulk discount based on the products markup percentage devide"""
+    bulk_discount_float = unit_price_float * float(self.bulk_discount_percentage.text)/100
+
+    """Setting the bulk discount value to display"""
+    self.bulk_discount = "$ " + '{:,.2f}'.format(bulk_discount_float)
+    self.bulk_discount_box.text = self.bulk_discount
+
+    """If checked take off discount"""
+    if self.bulk_discount_check.checked:
+      unit_price_float -= bulk_discount_float
+    
     """Setting the final price to display"""
     self.unit_price = "$ " + '{:,.2f}'.format(unit_price_float)
     self.unit_price_box.text = self.unit_price
