@@ -1,4 +1,4 @@
-from ._anvil_designer import Form1Template
+from ._anvil_designer import Form3Template
 from anvil import *
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -10,7 +10,7 @@ from anvil.google.drive import app_files
 from datetime import date
 import time
 
-class Form1(Form1Template):
+class Form3(Form3Template):
 
   """Initiating variables globally so they can be accesed from multiple functions"""
   item_number = ""
@@ -20,7 +20,6 @@ class Form1(Form1Template):
   fin_cost = ""
   total_cost = ""
   markup = ""
-  bulk_discount = ""
   unit_price = ""
   extended_price = ""
   net_amount = ""
@@ -41,18 +40,18 @@ class Form1(Form1Template):
     self.search_box.tooltip = "Enter the item/part number you want to look up."
     
     """Set the variable to look up items in the spreadsheet"""
-    self.full_list = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
+    self.full_list = [(row["Part Number"], row) for row in app_files.dd_pricing["Sheet1"].rows]
     self.part_look_up.items = self.full_list
     self.invoice_number_item = self.part_look_up.selected_value
     
-    """Set the date and quote/invoice number"""
+    """Set the date and quote/invoice number"""    
     self.rich_text_2.content = 'DATE ' + date.today().strftime("%B %d, %Y") + '\n' + 'NUMBER ' + self.invoice_number_item['Invoice Number']
     
     """Filling the list with blank items for formatting"""
     self.repeating_panel_1.items = [{}]
     for x in range(11):
       self.repeating_panel_1.items.append({})
-      
+    
     """Put a blank item into both other repeating panels so there text boxs are there"""
     self.repeating_panel_2.items = [{}]  
     self.repeating_panel_2.items = self.repeating_panel_2.items
@@ -62,47 +61,30 @@ class Form1(Form1Template):
 
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""
+
     """Reset check boxes to checked whenever product is changed"""
     self.freight_check.checked = True
     self.fin_cost_check.checked = True
     self.markup_check.checked = True
-    self.bulk_discount_check.checked = True
 
     """Getting the product info from the spreadsheet"""
     part_selected = self.part_look_up.selected_value
-    self.item_number = part_selected['Item Number']
+    self.item_number = part_selected['Part Number']
     self.item_description = part_selected['Description']
-    list_price = part_selected['List Price']
-    weight = part_selected['Weight']
-    discount = part_selected['Discounted']
+    list_price = part_selected['Price']
     exchange = part_selected['Exchange']
-    self.cost_after = part_selected['Cost after']
-    self.freight = part_selected['freight']
+    self.cost_after = part_selected['COST WITH']
+    self.freight = part_selected['FREIGHT']
     self.fin_cost = part_selected['Fin Cost']
-    self.total_cost = part_selected['Total Cost']
-    self.markup = part_selected['Markup']
-    self.unit_price = part_selected['SELLING PRICE']
-
-    """Get markup type from the spreadsheet"""
-    self.markup_percentage_type = int(part_selected['Markup Type'])
-
-    """Default one item"""
+    self.total_cost = part_selected['TOTAL']
+    self.markup = part_selected['MARK-UP']
     self.item_amount.text = 1
-
-    """Default no discount"""
-    self.bulk_discount_percentage.text = 0
-    
-    """Set markup percentage based on the type of markup"""
-    if self.markup_percentage_type == 1:
-      self.markup_percentage.text = 80
-    else:
-      self.markup_percentage.text = 46.5
+    self.unit_price = part_selected['SELLING PRICE']
+    self.markup_percentage.text = 65
 
     """Set the amounts into the displayed text to veiw"""
     self.item_description_text.text = self.item_description
     self.list_price_box.text = list_price
-    self.weight.text = weight
-    self.discount_box.text = discount
     self.exchange_box.text = exchange
     self.freight_box.text = self.freight
     self.fin_cost_box.text = self.fin_cost
@@ -134,8 +116,9 @@ class Form1(Form1Template):
     self.total_cost = "$ " + '{:,.2f}'.format(total_cost_float)
     self.total_cost_box.text = self.total_cost
 
-    """Calculating the markup based on the products markup percentage devide"""
+    """Calculating the markup based on the products markup percentage"""
     markup_float = total_cost_float * float(self.markup_percentage.text)/100
+
 
     """Setting the markup value to display"""
     self.markup = "$ " + '{:,.2f}'.format(markup_float)
@@ -145,27 +128,16 @@ class Form1(Form1Template):
     if self.markup_check.checked:
       unit_price_float += markup_float
 
-    """Calculating the bulk discount based on the products markup percentage devide"""
-    bulk_discount_float = unit_price_float * float(self.bulk_discount_percentage.text)/100
-
-    """Setting the bulk discount value to display"""
-    self.bulk_discount = "$ " + '{:,.2f}'.format(bulk_discount_float)
-    self.bulk_discount_box.text = self.bulk_discount
-
-    """If checked take off discount"""
-    if self.bulk_discount_check.checked:
-      unit_price_float -= bulk_discount_float
-    
     """Setting the final price to display"""
     self.unit_price = "$ " + '{:,.2f}'.format(unit_price_float)
     self.unit_price_box.text = self.unit_price
 
-    """Setting extended price to display"""
+    """Setting total price to display"""
     self.extended_price_float = unit_price_float*int(self.item_amount.text)
     self.extended_price = "$ " + '{:,.2f}'.format(self.extended_price_float)
     self.extended_price_box.text = self.extended_price
     pass
-    
+      
   def call_set_selling(self, **event_args):
     self.set_selling()
     pass
@@ -180,7 +152,7 @@ class Form1(Form1Template):
     
     """Add currently selected item to the repeating panel list whether empty or not"""
     try:
-      self.repeating_panel_1.items.append({'item_number_spot': self.item_number, 'item_description_spot': self.item_description, 'unit_price_spot': self.unit_price, 'quantity_spot': self.item_amount.text, 'extended_price_spot': self.extended_price})  
+      self.repeating_panel_1.items.append({'item_number_spot': self.item_number, 'item_description_spot': self.item_description, 'unit_price_spot': self.unit_price, 'quantity_spot': self.item_amount.text, 'extended_price_spot': self.extended_price}) 
     except AttributeError:
       self.repeating_panel_1.items = [
         {'item_number_spot': self.item_number, 'item_description_spot': self.item_description, 'unit_price_spot': self.unit_price, 'quantity_spot': self.item_amount.text, 'extended_price_spot': self.extended_price}
@@ -190,7 +162,7 @@ class Form1(Form1Template):
     for x in range(12):
       self.repeating_panel_1.items.append({})
     self.repeating_panel_1.items = self.repeating_panel_1.items
-
+    
     """Recalculate tax and totals and set the labels"""
     self.net_amount_float += self.extended_price_float
     self.net_amount_box.text =  '    $ ' + '{:,.2f}'.format(self.net_amount_float)
@@ -216,7 +188,7 @@ class Form1(Form1Template):
     self.invoice_number_item['Invoice Number'] = '' + str(int(self.invoice_number_item['Invoice Number'])+1)
     
     """Re-set the list items to set the invoice number to freshly updated one"""
-    self.part_look_up.items = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
+    self.part_look_up.items = [(row["Part Number"], row) for row in app_files.dd_pricing["Sheet1"].rows]
     self.invoice_number_item = self.part_look_up.selected_value
     
     """Set the date and number text again"""
@@ -229,7 +201,7 @@ class Form1(Form1Template):
     self.repeating_panel_1.items = [{}]
     for x in range(11):
       self.repeating_panel_1.items.append({})
-      
+    
     """Reset totals and tex to 0 and put that in their text boxes"""
     self.net_amount_float = 0
     self.net_amount_box.text = '    $ ' + '{:,.2f}'.format(self.net_amount_float)
@@ -266,7 +238,7 @@ class Form1(Form1Template):
     """Remove the 12 blank rows"""
     for x in range(12):
       self.repeating_panel_1.items.pop()
-      
+    
     """Remove items extended price from totals and tax"""
     self.net_amount_float -= float(self.repeating_panel_1.items[-1]['extended_price_spot'].lstrip('$ ').rstrip(' ').replace(",", ""))
     self.net_amount_box.text =  '    $ ' + '{:,.2f}'.format(self.net_amount_float)
@@ -294,7 +266,7 @@ class Form1(Form1Template):
     """Remove the 12 blank rows"""
     for x in range(12):
       self.repeating_panel_1.items.pop()
-      
+    
     """Adds number from text box as an item for continuing total"""
     try:
       self.repeating_panel_1.items.append({'item_number_spot': 'Cont.', 'item_description_spot': 'Previous Total', 'unit_price_spot': '', 'quantity_spot': '', 'extended_price_spot': '$ ' + '{:,.2f}'.format(float(self.previous_net_amount.text))})
@@ -302,7 +274,7 @@ class Form1(Form1Template):
       self.repeating_panel_1.items = [
         {'item_number_spot': 'Cont.', 'item_description_spot': 'Previous Total', 'unit_price_spot': '', 'quantity_spot': '', 'extended_price_spot': '$ ' + '{:,.2f}'.format(float(self.previous_net_amount.text.replace(",", "")))}
       ]
-      
+    
     """Add back the 12 blank rows"""
     try:
       for x in range(12):
@@ -328,17 +300,17 @@ class Form1(Form1Template):
     self.invoice_number_item['Invoice Number'] = '' + str(int(self.new_invoice_number.text))
     
     """Repull the new number from the sheet"""
-    self.part_look_up.items = [(row["Item Number"], row) for row in app_files.lbdata24["LBdata"].rows]
+    self.part_look_up.items = [(row["Part Number"], row) for row in app_files.dd_pricing["Sheet1"].rows]
     self.invoice_number_item = self.part_look_up.selected_value
     self.rich_text_2.content = 'DATE ' + date.today().strftime("%B %d, %Y") + '\n' + 'NUMBER ' + self.invoice_number_item['Invoice Number']
+    pass
+
+  def little_beaver_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Form1')
     pass
 
   def liftmaster_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Form2')
-    pass
-
-  def d_and_d_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('Form3')
     pass
