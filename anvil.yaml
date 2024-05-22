@@ -181,11 +181,11 @@ services:
   server_config: {enc_delegation_refresh_token: 3VHg4EbU1D7+PHdu3umVYBBPuG4wheaZcECOPd5uFV6BV6NI16MkxzwUSvczfuinn30sALFPtki1Fejy3vkAApZBfh/SOHJcGq4NOMvk+do84u+kNSerNBkd0bs8If5K4WffQZO5/mlDt0Nhe/LSKv4Uk8MXYfd4MQXF5hdfeGm8PJ8r9CGbag0jhxMtpfkYZIJGx6DW07HYd9f57i2TD17XNu+j3egiwDPmGAIL/CMPzONKL2pNwG6bhk6SM9Al2zwfMhMqIrIw9oAB3LQmyXaGgQK6vON10wP/ZWcfn0ggujlRLzTJqRQaPJGvXg==}
 package_name: M3_App_3
 allow_embedding: true
-name: Little Beaver Quote Creator
+name: Quote Creator
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
-metadata: {title: Little Beaver Quote Creator, description: Creates quotes from the excel list of little beaver products and their pricing.,
-  logo_img: 'asset:android-chrome-192x192.png'}
+metadata: {title: Quote Creator, description: 'Creates quotes from the excel list
+    of little beaver, liftmaster, and d&d products and their pricing.', logo_img: 'asset:android-chrome-192x192.png'}
 startup_form: Form1
 db_schema:
   users:
