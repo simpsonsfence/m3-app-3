@@ -16,9 +16,7 @@ components:
     layout_properties: {grid_position: 'QWSKJP,MYZNHZ'}
     components:
     - name: form_panel
-      properties: {role: border-bottom, tooltip: '', border: '', foreground: '', visible: true,
-        wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"BJVXDZ":20,"LSXARU":45,"QWVSOI":10,"DPDBBC":32,"OEWVIA":15,"AFPPEX":45,"PLJJWC":15,"PEUTTR":20,"NWRSJK":20,"YURRIM":20,"XASDJO":20,"QQKEPV":10,"MIRRZA":10,"NJQHSY":10,"NEOUNJ":30}',
-        spacing_below: none, background: ''}
+      properties: {role: border-bottom, tooltip: '', border: '', foreground: '', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"BJVXDZ":20,"LSXARU":45,"QWVSOI":10,"DPDBBC":32,"OEWVIA":15,"AFPPEX":45,"PLJJWC":15,"PEUTTR":20,"NWRSJK":20,"YURRIM":20,"XASDJO":20,"QQKEPV":10,"MIRRZA":10,"NJQHSY":10,"NEOUNJ":30}', spacing_below: none, background: ''}
       type: ColumnPanel
       layout_properties: {grid_position: 'GJURRN,DZBALF'}
       components:
@@ -41,18 +39,14 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'VBSKJM,NEOUNJ'}
       - name: search_copy
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: Part Look Up, font_size: 20, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true, text: Part Look Up, font_size: 20, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {grid_position: 'QNFDUR,BJVXDZ'}
       - name: search_box
         properties: {role: outlined}
         type: TextBox
         layout_properties: {grid_position: 'QNFDUR,PLJJWC'}
-        event_bindings: {pressed_enter: call_search_list, change: call_search_list,
-          lost_focus: call_search_list}
+        event_bindings: {pressed_enter: call_search_list, change: call_search_list, lost_focus: call_search_list}
       - name: part_look_up
         properties:
           role: null
@@ -79,17 +73,11 @@ components:
         data_bindings:
         - {property: enabled, code: '', writeback: false}
       - name: description_copy
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: Description, font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true, text: Description, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {grid_position: 'OKYQIN,OEWVIA'}
       - name: item_description_text
-        properties: {role: null, align: left, tooltip: '', border: ridge, foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
+        properties: {role: null, align: left, tooltip: '', border: ridge, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {grid_position: 'OKYQIN,AFPPEX'}
         event_bindings: {}
@@ -100,25 +88,16 @@ components:
         layout_properties: {grid_position: 'PHUZPT,JWTLWA'}
         components:
         - name: label_2_copy_2
-          properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-            visible: true, text: List Price, font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: true, underline: false, icon: ''}
+          properties: {role: null, align: right, tooltip: '', border: '', foreground: '', visible: true, text: List Price, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
           type: Label
           layout_properties: {grid_position: 'ICHCDR,HJXXSF'}
         - name: list_price_box
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: '', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: false, underline: false, icon: ''}
+          properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: false, underline: false, icon: ''}
           type: Label
           layout_properties: {grid_position: 'ICHCDR,JFKJIV'}
           data_bindings: []
         - name: label_9_copy
-          properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-            visible: true, text: Total Cost, font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: true, underline: false, icon: ''}
+          properties: {role: null, align: right, tooltip: '', border: '', foreground: '', visible: true, text: Total Cost, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
           type: Label
           layout_properties: {grid_position: 'LXBVMX,VYILMV'}
         - name: total_cost_box
@@ -140,23 +119,16 @@ components:
               type: Spacer
               layout_properties: {grid_position: 'HHWPVS,OSVMEV'}
             - name: markup_check
-              properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-                foreground: '', allow_indeterminate: false, visible: true, text: '',
-                font_size: null, font: '', spacing_above: none, spacing_below: none,
-                italic: false, background: '', bold: false, checked: true, underline: false}
+              properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null, font: '', spacing_above: none, spacing_below: none, italic: false, background: '', bold: false, checked: true, underline: false}
               type: CheckBox
               layout_properties: {grid_position: 'HHWPVS,TIMOIY'}
               event_bindings: {change: call_set_selling}
             - name: label_7_copy_2
-              properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-                visible: true, text: Mark Up, font_size: null, font: '', spacing_above: small,
-                icon_align: left, spacing_below: small, italic: false, background: '',
-                bold: true, underline: false, icon: ''}
+              properties: {role: null, align: right, tooltip: '', border: '', foreground: '', visible: true, text: Mark Up, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
               type: Label
               layout_properties: {grid_position: 'HHWPVS,OYZUHE'}
           - name: column_panel_6_copy_2
-            properties: {col_widths: '{"QWJNNF":35,"JKBXQS":34,"GRWJOW":8}', spacing_above: none,
-              spacing_below: none, col_spacing: medium}
+            properties: {col_widths: '{"QWJNNF":35,"JKBXQS":34,"GRWJOW":8}', spacing_above: none, spacing_below: none, col_spacing: medium}
             type: ColumnPanel
             layout_properties: {grid_position: 'XFGJJL,JWHEXG'}
             components:
@@ -168,13 +140,9 @@ components:
               properties: {role: outlined, spacing_above: none, spacing_below: none}
               type: TextBox
               layout_properties: {grid_position: 'GVEGHU,JKBXQS'}
-              event_bindings: {pressed_enter: call_set_selling, change: call_set_selling,
-                lost_focus: call_set_selling}
+              event_bindings: {pressed_enter: call_set_selling, change: call_set_selling, lost_focus: call_set_selling}
         - name: label_11_copy
-          properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-            visible: true, text: Selling Price, font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: true, underline: false, icon: ''}
+          properties: {role: null, align: right, tooltip: '', border: '', foreground: '', visible: true, text: Selling Price, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
           type: Label
           layout_properties: {grid_position: 'MUYGSR,WASTRG'}
         - name: unit_price_box
@@ -192,23 +160,16 @@ components:
             layout_properties: {grid_position: 'QEMNZJ,IAEXFM'}
             components:
             - name: label_2_copy_copy
-              properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-                visible: true, text: Amount, font_size: null, font: '', spacing_above: small,
-                icon_align: left, spacing_below: small, italic: false, background: '',
-                bold: true, underline: false, icon: ''}
+              properties: {role: null, align: right, tooltip: '', border: '', foreground: '', visible: true, text: Amount, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
               type: Label
               layout_properties: {grid_position: 'WRTLTB,HYFZWN'}
             - name: item_amount
               properties: {role: outlined, spacing_above: none, spacing_below: none}
               type: TextBox
               layout_properties: {grid_position: 'WRTLTB,JPQWWQ'}
-              event_bindings: {pressed_enter: call_set_selling, lost_focus: call_set_selling,
-                change: call_set_selling}
+              event_bindings: {pressed_enter: call_set_selling, lost_focus: call_set_selling, change: call_set_selling}
           - name: label_12_copy
-            properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-              visible: true, text: Total Price, font_size: null, font: '', spacing_above: small,
-              icon_align: left, spacing_below: small, italic: false, background: '',
-              bold: true, underline: false, icon: ''}
+            properties: {role: null, align: right, tooltip: '', border: '', foreground: '', visible: true, text: Total Price, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
             type: Label
             layout_properties: {grid_position: 'LCRBCE,XCETCN'}
           - name: extended_price_box
@@ -235,34 +196,26 @@ components:
               type: Spacer
               layout_properties: {grid_position: 'FOIFNO,VHTOSF'}
             - name: misc_check
-              properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-                foreground: '', allow_indeterminate: false, visible: true, text: '',
-                font_size: null, font: '', spacing_above: none, spacing_below: none,
-                italic: false, background: '', bold: false, checked: true, underline: false}
+              properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null, font: '', spacing_above: none, spacing_below: none, italic: false, background: '', bold: false, checked: true, underline: false}
               type: CheckBox
               layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
               event_bindings: {change: call_set_selling}
             - name: label_5_copy_3
-              properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-                visible: true, text: Misc., font_size: null, font: '', spacing_above: small,
-                icon_align: left, spacing_below: small, italic: false, background: '',
-                bold: true, underline: false, icon: ''}
+              properties: {role: null, align: right, tooltip: '', border: '', foreground: '', visible: true, text: Misc., font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
               type: Label
               layout_properties: {grid_position: 'FOIFNO,GUFLHW'}
           - name: misc_amount
             properties: {role: outlined, spacing_above: none, spacing_below: none}
             type: TextBox
             layout_properties: {grid_position: 'FKHFGW,XRZFPS'}
-            event_bindings: {pressed_enter: call_set_selling, change: call_set_selling,
-              lost_focus: call_set_selling}
+            event_bindings: {pressed_enter: call_set_selling, change: call_set_selling, lost_focus: call_set_selling}
         - name: column_panel_19
           properties: {}
           type: ColumnPanel
           layout_properties: {grid_position: 'KDGJLX,AASWUT'}
           components:
           - name: column_panel_7_copy
-            properties: {col_widths: '{"VKDCKU":32,"CMGTSI":8,"FSKEQJ":20}', spacing_above: none,
-              spacing_below: none}
+            properties: {col_widths: '{"VKDCKU":32,"CMGTSI":8,"FSKEQJ":20}', spacing_above: none, spacing_below: none}
             type: ColumnPanel
             layout_properties: {grid_position: 'CFKUGJ,PWOZPN'}
             components:
@@ -271,26 +224,19 @@ components:
               type: Spacer
               layout_properties: {grid_position: 'BZKDQC,VKDCKU'}
             - name: freight_check
-              properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-                foreground: '', allow_indeterminate: false, visible: true, text: '',
-                font_size: null, font: '', spacing_above: none, spacing_below: none,
-                italic: false, background: '', bold: false, checked: true, underline: false}
+              properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null, font: '', spacing_above: none, spacing_below: none, italic: false, background: '', bold: false, checked: true, underline: false}
               type: CheckBox
               layout_properties: {grid_position: 'BZKDQC,CMGTSI'}
               event_bindings: {change: call_set_selling}
             - name: label_3_copy
-              properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-                visible: true, text: Freight, font_size: null, font: '', spacing_above: small,
-                icon_align: left, spacing_below: small, italic: false, background: '',
-                bold: true, underline: false, icon: ''}
+              properties: {role: null, align: right, tooltip: '', border: '', foreground: '', visible: true, text: Freight, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
               type: Label
               layout_properties: {grid_position: 'BZKDQC,FSKEQJ'}
           - name: freight_amount
             properties: {role: outlined, spacing_above: none, spacing_below: none}
             type: TextBox
             layout_properties: {grid_position: 'CFKUGJ,DLUXMN'}
-            event_bindings: {pressed_enter: call_set_selling, change: call_set_selling,
-              lost_focus: call_set_selling}
+            event_bindings: {pressed_enter: call_set_selling, change: call_set_selling, lost_focus: call_set_selling}
         - name: column_panel_16
           properties: {}
           type: ColumnPanel
@@ -306,26 +252,19 @@ components:
               type: Spacer
               layout_properties: {grid_position: 'FOIFNO,VHTOSF'}
             - name: weld_charge_check
-              properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-                foreground: '', allow_indeterminate: false, visible: true, text: '',
-                font_size: null, font: '', spacing_above: none, spacing_below: none,
-                italic: false, background: '', bold: false, checked: true, underline: false}
+              properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null, font: '', spacing_above: none, spacing_below: none, italic: false, background: '', bold: false, checked: true, underline: false}
               type: CheckBox
               layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
               event_bindings: {change: call_set_selling}
             - name: label_5_copy
-              properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-                visible: true, text: Weld Charge, font_size: null, font: '', spacing_above: small,
-                icon_align: left, spacing_below: small, italic: false, background: '',
-                bold: true, underline: false, icon: ''}
+              properties: {role: null, align: right, tooltip: '', border: '', foreground: '', visible: true, text: Weld Charge, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
               type: Label
               layout_properties: {grid_position: 'FOIFNO,GUFLHW'}
           - name: weld_charge_amount
             properties: {role: outlined, spacing_above: none, spacing_below: none}
             type: TextBox
             layout_properties: {grid_position: 'TKKSCF,UPUZSQ'}
-            event_bindings: {pressed_enter: call_set_selling, change: call_set_selling,
-              lost_focus: call_set_selling}
+            event_bindings: {pressed_enter: call_set_selling, change: call_set_selling, lost_focus: call_set_selling}
         - name: column_panel_16_copy
           properties: {}
           type: ColumnPanel
@@ -341,26 +280,19 @@ components:
               type: Spacer
               layout_properties: {grid_position: 'FOIFNO,VHTOSF'}
             - name: prep_cost_check
-              properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-                foreground: '', allow_indeterminate: false, visible: true, text: '',
-                font_size: null, font: '', spacing_above: none, spacing_below: none,
-                italic: false, background: '', bold: false, checked: true, underline: false}
+              properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null, font: '', spacing_above: none, spacing_below: none, italic: false, background: '', bold: false, checked: true, underline: false}
               type: CheckBox
               layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
               event_bindings: {change: call_set_selling}
             - name: label_5_copy_copy
-              properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-                visible: true, text: Prep Cost, font_size: null, font: '', spacing_above: small,
-                icon_align: left, spacing_below: small, italic: false, background: '',
-                bold: true, underline: false, icon: ''}
+              properties: {role: null, align: right, tooltip: '', border: '', foreground: '', visible: true, text: Prep Cost, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
               type: Label
               layout_properties: {grid_position: 'FOIFNO,GUFLHW'}
           - name: prep_cost_amount
             properties: {role: outlined, spacing_above: none, spacing_below: none}
             type: TextBox
             layout_properties: {grid_position: 'TKKSCF,UPUZSQ'}
-            event_bindings: {pressed_enter: call_set_selling, change: call_set_selling,
-              lost_focus: call_set_selling}
+            event_bindings: {pressed_enter: call_set_selling, change: call_set_selling, lost_focus: call_set_selling}
         - name: column_panel_16_copy_2
           properties: {}
           type: ColumnPanel
@@ -376,26 +308,19 @@ components:
               type: Spacer
               layout_properties: {grid_position: 'FOIFNO,VHTOSF'}
             - name: pipe_check
-              properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-                foreground: '', allow_indeterminate: false, visible: true, text: '',
-                font_size: null, font: '', spacing_above: none, spacing_below: none,
-                italic: false, background: '', bold: false, checked: true, underline: false}
+              properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null, font: '', spacing_above: none, spacing_below: none, italic: false, background: '', bold: false, checked: true, underline: false}
               type: CheckBox
               layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
               event_bindings: {change: call_set_selling}
             - name: label_5_copy_2
-              properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-                visible: true, text: 2 7/8" PIPE, font_size: null, font: '', spacing_above: small,
-                icon_align: left, spacing_below: small, italic: false, background: '',
-                bold: true, underline: false, icon: ''}
+              properties: {role: null, align: right, tooltip: '', border: '', foreground: '', visible: true, text: 2 7/8" PIPE, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
               type: Label
               layout_properties: {grid_position: 'FOIFNO,GUFLHW'}
           - name: pipe_amount
             properties: {role: outlined, spacing_above: none, spacing_below: none}
             type: TextBox
             layout_properties: {grid_position: 'TKKSCF,UPUZSQ'}
-            event_bindings: {lost_focus: call_set_selling, change: call_set_selling,
-              pressed_enter: call_set_selling}
+            event_bindings: {lost_focus: call_set_selling, change: call_set_selling, pressed_enter: call_set_selling}
       - name: add_button
         properties: {text: Add Item(s), role: outlined-button}
         type: Button
@@ -440,22 +365,21 @@ components:
       layout_properties: {grid_position: 'DEMINX,FVZSCC'}
       components:
       - name: label_1_copy
-        properties: {role: title-small, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: Simpson's Fence (Chatham) Ltd., font_size: null, font: '',
-          spacing_above: none, icon_align: left, spacing_below: none, italic: false,
-          background: '', bold: true, underline: false, icon: ''}
+        properties: {role: title-small, align: left, tooltip: '', border: '', foreground: '', visible: true, text: Simpson's Fence (Chatham) Ltd., font_size: null, font: '', spacing_above: none, icon_align: left, spacing_below: none, italic: false, background: '', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {grid_position: 'SOLARX,SZLGXD VYUXEA,BKNNOH'}
       - name: rich_text_1_copy
-        properties: {content: '1030 Richmond St.
-
+        properties:
+          content: |-
+            1030 Richmond St.
             CHATHAM ON N7M 5J5
-
             Phone: (519) 354-0540
-
             Fax: (519) 351-8557
-
-            www.simpsonsfence.com', font: '', role: bold, spacing_above: none, spacing_below: none}
+            www.simpsonsfence.com
+          font: ''
+          role: bold
+          spacing_above: none
+          spacing_below: none
         type: RichText
         layout_properties: {grid_position: 'SOLARX,SZLGXD JMFWPE,YSHUNU'}
       - name: spacer_1_copy
@@ -463,14 +387,18 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'SOLARX,EVRCWJ'}
       - name: label_10_copy
-        properties: {text: SALES QUOTE, bold: true, align: right, spacing_above: none,
-          spacing_below: none, role: title-big}
+        properties: {text: SALES QUOTE, bold: true, align: right, spacing_above: none, spacing_below: none, role: title-big}
         type: Label
         layout_properties: {grid_position: 'SOLARX,UERZRI GKBICC,BSZHLM'}
       - name: rich_text_2
-        properties: {content: 'DATE
-
-            NUMBER', align: right, role: bold, spacing_above: none, spacing_below: none}
+        properties:
+          content: |-
+            DATE
+            NUMBER
+          align: right
+          role: bold
+          spacing_above: none
+          spacing_below: none
         type: RichText
         layout_properties: {grid_position: 'SOLARX,UERZRI NHAJKG,RFZMFU'}
     - name: column_panel_9_copy
@@ -492,8 +420,7 @@ components:
           type: Label
           layout_properties: {grid_position: 'WKGUMO,IBWLVB'}
         - name: text_area_1_copy
-          properties: {background: 'theme:Background', role: no-resize, border: none,
-            spacing_above: none, spacing_below: none, height: 65, placeholder: Bill to here}
+          properties: {background: 'theme:Background', role: no-resize, border: none, spacing_above: none, spacing_below: none, height: 65, placeholder: Bill to here}
           type: TextArea
           layout_properties: {grid_position: 'JKYHGS,MJZLDO'}
       - name: spacer_5_copy_2
@@ -510,8 +437,7 @@ components:
           type: Label
           layout_properties: {grid_position: 'TTTHSR,HGXBBR'}
         - name: text_area_2_copy
-          properties: {background: 'theme:Background', role: no-resize, border: none,
-            spacing_above: none, spacing_below: none, height: 65, placeholder: Ship to here}
+          properties: {background: 'theme:Background', role: no-resize, border: none, spacing_above: none, spacing_below: none, height: 65, placeholder: Ship to here}
           type: TextArea
           layout_properties: {grid_position: 'CKTWBN,EDLFQU'}
       - name: spacer_7_copy
@@ -572,17 +498,13 @@ components:
           - name: data_grid_1_copy
             properties:
               columns:
-              - {id: JKSDUP, title: Item Num., data_key: item_number_spot, width: 75,
-                expand: false}
-              - {id: VJQQOR, title: Description, data_key: item_description_spot,
-                width: 176, expand: false}
+              - {id: JKSDUP, title: Item Num., data_key: item_number_spot, width: 75, expand: false}
+              - {id: VJQQOR, title: Description, data_key: item_description_spot, width: 176, expand: false}
               - {id: OJLQEN, title: UOM, data_key: uom_spot, width: 65, expand: false}
-              - {id: RXRYNW, data_key: quantity_spot, title: Qty. Req., width: 68,
-                expand: false}
+              - {id: RXRYNW, data_key: quantity_spot, title: Qty. Req., width: 68, expand: false}
               - {id: RNVHPW, data_key: shipped_spot, title: Shipped, width: 67, expand: false}
               - {id: PQSMVD, data_key: bo_spot, title: B.O., width: 64, expand: false}
-              - {id: ATLXSR, data_key: unit_price_spot, title: Unit Price, width: 78,
-                expand: false}
+              - {id: ATLXSR, data_key: unit_price_spot, title: Unit Price, width: 78, expand: false}
               - {id: QTDMMI, data_key: extended_price_spot, title: Extended Price}
               show_page_controls: false
               spacing_above: none
@@ -609,13 +531,11 @@ components:
       layout_properties: {grid_position: 'AZDAPB,RESQVG'}
       components:
       - name: label_15_copy
-        properties: {spacing_above: none, spacing_below: none, text: 'Payment Type:',
-          visible: false}
+        properties: {spacing_above: none, spacing_below: none, text: 'Payment Type:', visible: false}
         type: Label
         layout_properties: {grid_position: 'OHBQEC,JXEPKJ'}
       - name: text_box_1_copy
-        properties: {spacing_above: none, spacing_below: none, background: 'theme:Background',
-          border: none, bold: true, placeholder: Payment Type Here, visible: false}
+        properties: {spacing_above: none, spacing_below: none, background: 'theme:Background', border: none, bold: true, placeholder: Payment Type Here, visible: false}
         type: TextBox
         layout_properties: {grid_position: 'OHBQEC,JARRPN'}
       - name: spacer_6_copy
@@ -623,11 +543,13 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'OHBQEC,FFXWHX'}
       - name: rich_text_3_copy
-        properties: {spacing_above: none, spacing_below: none, content: 'Terms: Payment
-            Due upon Receipt of Invoice. Carrying charges on past due amounts is 2%
-            per month (24% per annum)
-
-            Business Number 899023725RT0001', align: center}
+        properties:
+          spacing_above: none
+          spacing_below: none
+          content: |-
+            Terms: Payment Due upon Receipt of Invoice. Carrying charges on past due amounts is 2% per month (24% per annum)
+            Business Number 899023725RT0001
+          align: center
         type: RichText
         layout_properties: {grid_position: 'YYKBCM,UTRFQR'}
     - name: column_panel_14_copy
@@ -636,18 +558,15 @@ components:
       layout_properties: {grid_position: 'AZDAPB,CKHAZT'}
       components:
       - name: label_16_copy
-        properties: {spacing_above: none, spacing_below: none, bold: true, text: NET AMOUNT,
-          align: right}
+        properties: {spacing_above: none, spacing_below: none, bold: true, text: NET AMOUNT, align: right}
         type: Label
         layout_properties: {grid_position: 'TYGGUV,VODHSF HBQSHM,FSDBGC'}
       - name: label_17_copy
-        properties: {spacing_above: none, spacing_below: none, text: H.S.T., bold: true,
-          align: right}
+        properties: {spacing_above: none, spacing_below: none, text: H.S.T., bold: true, align: right}
         type: Label
         layout_properties: {grid_position: 'TYGGUV,VODHSF ZLAYQO,DWXHER'}
       - name: label_18_copy
-        properties: {spacing_above: none, spacing_below: none, text: TOTAL DUE, bold: true,
-          align: right}
+        properties: {spacing_above: none, spacing_below: none, text: TOTAL DUE, bold: true, align: right}
         type: Label
         layout_properties: {grid_position: 'TYGGUV,VODHSF GKKWIV,UWZKTD'}
       - name: linear_panel_1_copy
@@ -667,7 +586,6 @@ components:
           type: Label
           layout_properties: {}
         - name: total_due_box
-          properties: {align: left, spacing_above: small, spacing_below: none, role: border,
-            text: ''}
+          properties: {align: left, spacing_above: small, spacing_below: none, role: border, text: ''}
           type: Label
           layout_properties: {}
