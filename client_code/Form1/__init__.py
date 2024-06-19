@@ -145,9 +145,12 @@ class Form1(Form1Template):
     if self.markup_check.checked:
       unit_price_float += markup_float
 
-    """Calculating the bulk discount based on the products markup percentage devide"""
-    bulk_discount_float = unit_price_float * float(self.bulk_discount_percentage.text)/100
-
+    try:
+      """Calculating the bulk discount based on the products markup percentage devide"""
+      bulk_discount_float = unit_price_float * float(self.bulk_discount_percentage.text)/100
+    except:
+      bulk_discount_float = 0
+      
     """Setting the bulk discount value to display"""
     self.bulk_discount = "$ " + '{:,.2f}'.format(bulk_discount_float)
     self.bulk_discount_box.text = self.bulk_discount
